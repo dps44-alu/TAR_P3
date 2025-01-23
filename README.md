@@ -40,7 +40,7 @@ catkin_make
 ```
 El comando [catkin_make](https://wiki.ros.org/catkin/commands/catkin_make) es una herramienta práctica para trabajar con [espacios de trabajo catkin](https://wiki.ros.org/catkin/workspaces). Ejecutándolo la primera vez en su espacio de trabajo, creará un enlace *CMakeLists.txt* en su carpeta `src`.
 
-Además, si miras en tu directorio actual ahora deberías tener una carpeta 'build' y 'devel'. Dentro de la carpeta 'devel' puedes ver que ahora hay varios archivos setup.*sh. Cualquiera de estos archivos se superpondrá a este espacio de trabajo en la parte superior de su entorno. Para más información consulte la documentación general de catkin: catkin. Antes de continuar genere su nuevo archivo setup.*sh:
+Además, si miras en tu directorio actual ahora deberías tener una carpeta 'build' y 'devel'. Dentro de la carpeta 'devel' puedes ver que ahora hay varios archivos `setup.*sh`. Cualquiera de estos archivos se superpondrá a este espacio de trabajo en la parte superior de su entorno. Para más información consulte la documentación general de catkin: catkin. Antes de continuar genere su nuevo archivo `setup.*sh`:
 
 ```bash
 source devel/setup.bash
@@ -112,3 +112,350 @@ rosrun servicio_suma add_two_ints_client.py 3 7
 1. Publica desde la terminal un mensaje, con la cadena de caracteres que desees, al topic `/chatter` y para que este sea leído por el nodo `/listener`. Escribe los comandos que has tenido que ejecutar para que esto suceda. Ten en cuenta que el nodo ROS master no está lanzado todavía.
 
 2. Cambia el servicio `servicio_suma` para que haga la suma de tres enteros. Describe que has tenido que hacer y los archivos que has tenido que modificar.
+
+## Parte 2: Primeros Pasos con ROS
+Anteriormente se ha explicado como se crea un espacio de trabajo ROS, a continuación el objetivo es aprender a generar paquetes ROS y crear mensajes para que otros nodos publiquen este tipo de mensajes. Asimismo, se explicará como crear archivos `*.launch`, los cuales permiten lanzar varios nodos a la vez. 
+
+### Crear un Paquete de ROS
+El software en ROS se organiza en paquetes. Un paquete puede contener nodos ROS, una biblioteca independiente de ROS, un conjunto de datos, archivos de configuración, una pieza de software de terceros, o cualquier otra cosa que lógicamente constituya un módulo útil. El objetivo de estos paquetes es proporcionar esta funcionalidad útil de una manera fácil de consumir para que el software pueda ser fácilmente reutilizado. En general, los paquetes ROS siguen el principio de "Ricitos de oro": suficiente funcionalidad para ser útil, pero no demasiada para que el paquete sea pesado y difícil de usar desde otro software.
+
+Los paquetes de ROS requieren de una serie de ficheros específicos para poder
+realizar la compilación de dicho paquete. Para ello, se puede hacer a mano o emplear la herramienta `catkin_create_pkg` que genera automáticamente toda esa estructura de paquete ROS. Este comando debe ser lanzado desde la carpeta `src/` del espacio de trabajo.
+```bash
+cd catkin_ws/src
+catkin_create_pkg primer_paquete rospy std_msgs
+```
+
+Inicialmente, como se va a estar desarrollando código con Python se ha generado este paquete mediante las dependencias `rospy`. Además, se ha añadido al paquete la dependencia de a los mensajes estándares de ROS, `std_msgs`. A continuación, se va a compilar este paquete, aunque el paquete todavía esté vacío, mediante el siguiente comando. Este comando debe ser ejecutado desde alguna de las carpetas del espacio de trabajo.
+
+```bash
+catkin_make
+```
+
+> Pregunta 1: ¿Dónde se puede observar que el paquete realmente tiene como dependencias `rospy` y `std_msgs`?
+
+### Crear un mensaje
+Los nodos se comunican entre sí publicando [mensajes](https://wiki.ros.org/Messages) en los temas. Un mensaje es una estructura de datos simple, compuesta por campos tipificados. Se admiten tipos primitivos estándar (entero, coma flotante, booleano, etc.), así como matrices de tipos primitivos. Los mensajes pueden incluir estructuras y matrices anidadas de forma arbitraria (como los structs de C).
+
+Para generar un mensaje es necsario crear una carpeta `msg/` dentro del paquete, la cual contendrá el archivo `miMensaje.msg` y dentro de este se definirá la estructura de datos del mensaje.
+
+```bash
+cd catkin_ws/src/primer_paquete
+mkdir msg
+cd msg/
+touch miMensaje.msg
+chmod u+x miMensaje.msg
+```
+
+Una vez creado el fichero para crear el mensaje, lo editamos para que el paquete mensaje tenga los siguientes valores: `int32 x`, `int32 y`, `string  ombre=miNombre`. Tras modificar este fichero, debemos abrir el fichero `package.xml` del paquete y añadir las siguientes dependencias:
+```xml
+<build_depend>message_generation</build_depend>
+<exec_depend>message_runtime</exec_depend>
+```
+
+A continuación, hay que abrir el fichero `CMakeLists.txt` del paquete y modificar, sin quitar lo que ya hay o quitando los comentarios correspondientes, las siguientes dependencias:
+```
+find_package(... REQUIRED COMPONENTS message_generation ...).
+add_message_files(FILES miMensaje.msg)
+generate_messages(DEPENDENCIES std_msgs)
+catkin_package(... CATKIN_DEPENS message_runtime ...)
+```
+
+Una vez hechas estas modificaciones, el siguiente paso es volver a compilar el paquete mediante catkin_make primer_paquete (siempre en la raiz de `/catkin_ws/`), de esta forma si hay varios paquetes no perderemos tiempo recompilando el resto. Tras compilar correctamente el paquete, debemos actualizar las dependencias del espacio de trabajo ejecutando `source devel/setup.bash`. Si el mensaje ha sido creado correctamente, podremos saber de qué tipo es el mensaje creado a través de la terminal.
+
+> Pregunta 2: ¿Qué comando se debe utilizar? (Pista: [rosmsg](https://wiki.ros.org/rosmsg))
+
+Ahora ya se puede crear un nodo que publique en un topic información con el mensaje creado. Para ello, en la carpeta `src/` de nuestro paquete vamos a crear dos nodos, un publisher, llamado `/envío_miMensaje`, y un subscriber, llamado `/recibo_miMensaje`.
+
+Para crear estos dos nodos, que vamos a desarrollar en Python, ejecutamos los siguientes comandos:
+
+```bash
+cd catkin_ws/src/primer_paquete/src
+touch nodo_envia.py
+touch nodo_recibe.py
+chmod u+x nodo_evia.py
+chmod u+x nodo_recibe
+```
+
+Y escribimos el siguiente código en cada uno de estos ficheros.
+
+- `nodo_recibe.py`:
+```python
+#!/usr/bin/env python
+import rospy
+from primer_paquete.msg import miMensaje
+
+def callback(data):
+    rospy.loginfo("Recibo: %s - x: %s; y: %s" % (data.nombre, data.x, data.y))
+
+def nodo_recibe():
+    rospy.init_node('nodo_recibe', anonymous=True)
+    rospy.Subscriber("mi_topic", miMensaje, callback)
+    rospy.spin()
+
+if __name__ == '__main__':
+    nodo_recibe()
+```
+
+- `nodo_envia.py`:
+```python
+#!/usr/bin/env python
+import rospy
+from primer_paquete.msg import miMensaje
+
+def nodo_envia():
+    mensaje = miMensaje()
+    mensaje.x = 0
+    mensaje.y = 0
+
+    pub = rospy.Publisher('/mi_topic', miMensaje, queue_size=10)
+    rospy.init_node('nodo_envia', anonymous=True)
+    rate = rospy.Rate(10) # 10hz
+
+    while not rospy.is_shutdown():
+
+        mensaje.x += 1
+        mensaje.y += 2
+        envio_str = "Envio: %s - x: %s; y: %s" % (mensaje.nombre, mensaje.x, mensaje.y)
+        rospy.loginfo(envio_str)
+        pub.publish(mensaje)
+        rate.sleep()
+
+if __name__ == '__main__':
+    try:
+        nodo_envia()
+    except rospy.ROSInterruptException:
+        pass
+```
+
+Ahora solo nos queda hacer ejecutables estos ficheros, lanzar el ROSMaster (roscore) y lanzar cada nodo en una terminal diferente.
+
+> Pregunta 3: Muestra el gráfico de entorno ROS generado, usando rqt_graph.
+>
+> Pregunta 4: Intenta modificar la constante nombre, del mensaje, modificando el código del nodo `/nodo_envia`. ¿Qué sucede?
+>
+> Pregunta 5: ¿De qué tipo es el topic que aparece?
+
+### Crear un archivo launch
+[`roslaunch`](http://wiki.ros.org/es/roslaunch) es una herramienta para lanzar fácilmente múltiples nodos ROS local y remotamente vía SSH, así como para establecer parámetros en el Servidor de Parámetros. Incluye opciones para reiniciar automáticamente los procesos que ya han muerto. `roslaunch` toma uno o más archivos de configuración XML (con la extensión .launch) que especifican los parámetros a establecer y los nodos a lanzar, así como las máquinas en las que se deben ejecutar.
+
+Los nodos que se han lanzado anteriormente, han tenido que ser lanzados de forma independiente en terminales separadas, sin embargo, los podemos lanzar a la vez simplemente generado un archivo `.launch`. Para ello, es necesario generar la carpeta `launch/` que albergará los archivos de esta naturaleza, de la siguiente manera:
+```bash
+cd catkin_ws/src/primer_paquete
+mkdir launch && cd launch
+touch mi_launch.launch
+chmod u+x mi_launch.launch
+```
+
+A continuación, introducimos el siguiente código en el fichero `mi_launch.launch`.
+
+```xml
+<launch>
+    <!-- Nodo de envio -->
+    <node name="envia_nodo" pkg="primer_paquete" type="nodo_envia.py" output="screen"/>
+    <!-- Nodo de recibir -->
+    <node name="recibe_nodo" pkg="primer_paquete" type="nodo_recibe.py" output="screen"/>
+</launch>
+```
+
+> Pregunta 6: ¿Con que nombre se han lanzado los nodos?
+
+### Ejercicios
+1. Crea un paquete nuevo que se llame p2pkg. A continuación, define un mensaje con los siguientes campos:
+```
+int32 numero
+geometry_msgs/Pose posicion
+string fecha=hoy
+```
+
+Una vez definido, muestra los campos del mensaje usando el comando `rosmsg show`.
+
+2. Crea un nodo publisher, llamado `/nodopub_ejercicio2`, y un nodo subscriber, llamado `/nodosub_ejercicio2`, que sean capaces de enviar y recibir el tipo de mensajes a través un topic al que llamaremos `/topic_ejercicio2`. Estos nodos deben ser creados dentro del paquete ROS p2pkg.
+
+El nodo `/nodopub_ejercicio2` debe tener un argumento de entrada que se asignará al campo numero del mensaje. Además, para enviar todos los valores del campo posición utiliza la función *random* del paquete *random* de Python.
+
+Ambos nodos deben mostrar por la terminal el valor del campo fecha, del campo numero, del campo `posicion.position.x` y del campo `posicion.orientation.w`
+
+```python
+# Pista:
+from random import random
+posicion.orientation.x = random()
+```
+
+3. Genera un fichero llamado `launch_ejercicio3.launch` que sea capaz de lanzar los nodos creados en el ejercicio anterior al mismo tiempo. El argumento de entrada se debe añadir desde el propio fichero launch, teniendo un valor por defecto de 3.
+
+4. Crea otro fichero llamado `launch_ejercicio4.launch` que agrupe estos dos nodos dentro de un mismo grupo, llamado `miGrupo`. Haz uso de la etiqueta `remap` para que el topic también se encuentre dentro de ese grupo. (Pista: [`group`](http://wiki.ros.org/roslaunch/XML/group), [`remap`](http://wiki.ros.org/roslaunch/XML/remap))
+
+## Parte 3: Acciones en ROS
+En cualquier gran sistema basado en ROS, hay casos en los que a alguien le gustaría enviar una solicitud a un nodo para realizar alguna tarea, y también recibir una respuesta a la solicitud. Esto se puede conseguir actualmente a través de los `servicios` ROS.
+
+En algunos casos, sin embargo, si el servicio tarda mucho tiempo en ejecutarse, el usuario podría querer la posibilidad de cancelar la solicitud durante la ejecución u obtener información periódica acerca de cómo está progresando la solicitud. Las acciones en ROS permiten crear servicios que ejecuten objetivos de larga duración que puedan ser adelantados. También proporciona una interfaz de cliente para enviar solicitudes al servidor. El cliente y el servidor se comunican mediante un protocolo desarrollado para este
+fin, basado en mensajes ROS.
+
+En esta parte, se va a aprender la manera en la que se programa una acción
+tanto la parte servidor como la parte cliente. Esta acción va a calcular la serie de Fibonacci de una longitud n.
+
+### Crear un mensaje de tipo Action
+Para empezar, vamos a crear un paquete llamado `mi_accion` con dependencias a `rospy` y `std_msgs`. Como sabemos, antes de crear una acción es importante definir los mensajes de objetivo (`goal`), realimentación (`feedback`) y resultado (`result`). Estos mensajes se generan automáticamente desde un fichero `*.action`. Para este ejercicio vamos a crear un fichero llamado `Fibonacci.action` definido de la siguiente manera:
+
+```
+int32 orden
+---
+int32[] secuencia_final
+---
+int32[] secuencia_actual
+```
+
+Para que se generen estos mensajes, debemos añadir al *CMakeLists.txt* lo siguiente:
+
+```
+find_package(catkin REQUIRED COMPONENTS actionlib_msgs)
+add_action_files(
+    DIRECTORY action
+    FILES Fibonacci.action
+)
+generate_messages(
+    DEPENDENCIES actionlib_msgs std_msgs
+)
+catkin_package(
+    CATKIN_DEPENDS actionlib_msgs
+)
+```
+
+Y en el fichero package.xml:
+
+```xml
+<build_depend>actionlib_msgs</build_depend>
+<exec_depend>message_generation</exec_depend>
+<exec_depend>actionlib_msgs</exec_depend>
+```
+
+Una vez añadidos el fichero `*.action` y realizadas las modificaciones pertinentes, debemos compilar nuestro paquete. Ahora, se han generado automáticamente ficheros `*.msg` relacionados con la acción, que usaremos tanto en el nodo servidor como en el cliente. Estos ficheros se pueden ver en las siguientes carpetas:
+
+```bash
+ls devel/share/mi_accion/msg
+ls devel/include/mi_accion
+```
+
+> Pregunta 1: A partir de la información del fichero `actionFib.action`, ¿cuál es el tipo de mensaje que se esperará el servidor para comenzar a realizar la acción?, ¿y el tipo de mensaje que esperará el cliente como resultado?, ¿y qué tipo de mensaje se enviará como realimentación?
+
+### Server Action
+
+Una vez creados los mensajes que se van a intercambiar servidor y cliente, vamos a ver como se crea un servidor. Para ello creamos un fichero llamado `fib_server.py` y copiamos el siguiente código:
+
+```python
+#! /usr/bin/env python
+import rospy
+import actionlib
+import mi_accion.msg
+class FibonacciAction(object):
+    # create messages that are used to publish feedback/result
+    _feedback = mi_accion.msg.FibonacciFeedback()
+    _result = mi_accion.msg.FibonacciResult()
+    def __init__(self, name):
+        self._action_name = name
+        self._as = actionlib.SimpleActionServer(self._action_name, mi_accion.msg.FibonacciAction, execute_cb=self.execute_cb, auto_start = False)
+        self._as.start()
+    def execute_cb(self, goal):
+        # helper variables
+        r = rospy.Rate(1)
+        success = True
+        # append the seeds for the fibonacci sequence
+        self._feedback.secuencia_actual = []
+        self._feedback.secuencia_actual.append(0)
+        self._feedback.secuencia_actual.append(1)
+        # publish info to the console for the user
+        rospy.loginfo('%s: Ejecutando, creando una secuencia de fibonacci de orden %i con semilla%i, %i' % (self._action_name, goal.orden, self._feedback.secuencia_actual[0], self._feedback.secuencia_actual[1]))
+        # start executing the action
+        for i in range(1, goal.orden):
+        # check that preempt has not been requested by the client
+            if self._as.is_preempt_requested():
+                rospy.loginfo('%s: Cancelado' % self._action_name)
+                self._as.set_preempted()
+                success = False
+                break
+            self._feedback.secuencia_actual.append(self._feedback.secuencia_actual[i] + self._feedback.secuencia_actual[i-1])
+            # publish the feedback
+            self._as.publish_feedback(self._feedback)
+            # this step is not necessary, the sequence is computed at 1 Hz for demonstration purposes
+            r.sleep()
+        if success:
+            self._result. secuencia_final= self._feedback.secuencia_actual
+            rospy.loginfo('%s: Completado' % self._action_name)
+            self._as.set_succeeded(self._result)
+if __name__ == '__main__':
+    rospy.init_node('fibonacci')
+    server = FibonacciAction(rospy.get_name())
+    rospy.loginfo('Accion Fibonacci lanzada y esperando un objetivo!')
+    rospy.spin()
+```
+
+Se pueden observar varias cosas en este fichero. Primero, hemos importado `actionlib`, para poder hacer uso de `SimpleActionServer`, y `mi_accion.msg`, y así hacer uso de los mensajes relacionados con la acción. Por otro lado, en el `main` creamos el objeto server que pertenece a la clase `FibonnaciAction`, donde se va a definir la funcionalidad de la acción. Y finalmente, dentro de la clase `FibonnaciAction`, hay definida una función llamada `execute_cb` que es la que se va a lanzar cuando se le mande un objetivo a la acción.
+
+Ahora que ya sabemos esto, vamos a lanzar el nodo servidor para estudiar que ocurre:
+
+```bash
+rosrun mi_accion fib_server.py
+```
+
+> Pregunta 2: ¿Cómo podemos saber que se ha lanzado la acción correctamente?
+>
+> Pregunta 3: Sin crear un nodo, ¿cómo lanzarías la acción Fibonnaci? ¿Cómo observarías el resultado de
+esta acción?
+
+### Client Action
+Ahora que ya hemos creado el servidor, el siguiente paso es crear el cliente para poder lanzar la acción desde un nodo. Por ello, vamos a crear un fichero llamado `fib_client.py` donde vamos a copiar el siguiente código:
+```python
+#! /usr/bin/env python
+import rospy
+# Brings in the SimpleActionClient
+import actionlib
+# Brings in the messages used by the fibonacci action, including the
+# goal message and the result message.
+import mi_accion.msg
+def fibonacci_client():
+    # Creates the SimpleActionClient, passing the type of the action
+    # (FibonacciAction) to the constructor.
+    client = actionlib.SimpleActionClient('fibonacci', mi_accion.msg.FibonacciAction)
+    # Waits until the action server has started up and started
+    # listening for goals.
+    client.wait_for_server()
+    # Creates a goal to send to the action server.
+    goal = mi_accion.msg.FibonacciGoal(orden=20)
+    # Sends the goal to the action server.
+    client.send_goal(goal)
+    # Waits for the server to finish performing the action.
+    client.wait_for_result()
+    # Prints out the result of executing the action
+    return client.get_result() # A FibonacciResult
+
+if __name__ == '__main__':
+    try:
+        # Initializes a rospy node so that the SimpleActionClient can
+        # publish and subscribe over ROS.
+        rospy.init_node('fibonacci_client_py')
+        result = fibonacci_client()
+        print("Result:", ', '.join([str(n) for n in result.secuencia_final]))
+    except rospy.ROSInterruptException:
+        pass
+```
+
+Cabe destacar varias cosas con respecto al código anterior. Primero, hemos vuelto a utilizar actionlib, en este caso para hacer uso de  `impleActionClient`, y `mi_accion.msg`. Después, hemos llamado a la acción lanzando un mensaje con el objetivo, en este caso de orden 20. Y finalmente, tras esperar al resultado, se ha obtenido el resultado para mostrarlo por pantalla.
+
+Ahora, vamos a lanzar el nodo para comprobar que, efectivamente, este nodo lanza una acción para que el servidor nos genere una secuencia de Fibonacci de orden 20:
+
+```bash
+rosrun mi_accion fib_client.py
+```
+
+> Pregunta 4: ¿Dónde se puede observar la realimentación que nos está ofreciendo el Servidor? ¿Y el resultado?
+>
+> Pregunta 5: Si paramos el nodo a mitad de la ejecución de la acción, ¿se cancela la acción? ¿Cómo cancelarías la acción?
+
+### Ejercicios
+
+1. Genera una nueva acción, `ejFibonacci.action` donde el goal y el `result` sean el mismo que `Fibonacci.action`, pero el feedback sea de tipo float32.
+
+2. Crea un fichero `ejercicios_fibServer.py` que sea el servidor de la acción ejFibonacci para que se comporte igual que `fib_server.py`, con la diferencia de que el feedback ha de ser la media de la secuencia de Fibonacci que se está calculando en cada iteración.
+
+3. Crea un fichero `ejercicios_fibClient.py` que sea el nodo cliente de la acción, para que elorden de la de la secuencia sea modificable a través de un parámetro de entrada. Este nodo cliente publicar la frase ‘en proceso’ a un topic llamado `/estado_accion` mientras la acción esté en proceso. Finalmente, debe mostrar el resultado obtenido de la acción por pantalla.

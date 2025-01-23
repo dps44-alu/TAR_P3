@@ -5,7 +5,9 @@ ROS es una colección de software de código abierto destinados al desarrollo de
 ## Instalación
 Para la realización de esta práctica y las sucesivas, se han generado varios `Dockerfile` que serán los encargados de generar las imágenes de ROS para poder trabajar con ellas. Esto nos va a permitir generar contenedores de `Docker` con dichas imágenes, de forma que, podamos tener todas las dependencias y librerias contenezidas dentro de nuestro sistema operativo (Ubuntu 24.04 LTS), evitando así incompatibilidades con otras aplicaciones. 
 
-Para comenzar con la instalación se requiere de abrir una terminal dentro de la carpeta que contenga esta práctica y ejecutar los siguientes comandos:
+Para poder trabajar con los contenedores de `Docker` y ROS es necesario antes de comenzar, es necesario realizar los pasos que se encuentran en el documento [Instalacion.md](Instalacion.md) dentro de este repositorio. Este documento contiene la guía de instalación con las heramientas necesarias para poder ejecutar las prácticas de la asignatura.
+
+Para comenzar con la instalación de ROS dentro de un contenedor `Docker` se requiere de abrir una terminal dentro de la carpeta que contenga esta práctica y ejecutar los siguientes comandos:
 
 1. Crear y construir la imágen de ROS Noetic a través del `Dockerfile`:
 ```bash
@@ -32,11 +34,29 @@ sudo chmod u+x connect_ros.sh # Solo la primera vez para dar los permisos necesa
 Cuando se trabaja con el código fuente de ROS, a menudo es útil hacerlo en un `workspace` (Espacio de trabajo). Para crear un espacio de trabajo ROS lo único que tenemos que hacer es navegar hasta el directorio en el que queramos crear el espacio de trabajo y ejecutar los comando que aparecen a
 continuación. Se recomienda crearlo en la carpeta raíz de nuestro espacio de trabajo en el contenedor de `Docker` y con el nombre `catkin_ws`.
 ```bash
-mkdir -p ~/catkin_ws/src
-cd ~/catkin_ws/
+mkdir -p catkin_ws/src
+cd catkin_ws/
 catkin_make
 ```
-El comando `catkin_make` es el encargado de generar las carpetas necesarias para la compilación de nuestros paquetes.
+El comando [catkin_make](https://wiki.ros.org/catkin/commands/catkin_make) es una herramienta práctica para trabajar con [espacios de trabajo catkin](https://wiki.ros.org/catkin/workspaces). Ejecutándolo la primera vez en su espacio de trabajo, creará un enlace *CMakeLists.txt* en su carpeta `src`.
+
+Además, si miras en tu directorio actual ahora deberías tener una carpeta 'build' y 'devel'. Dentro de la carpeta 'devel' puedes ver que ahora hay varios archivos setup.*sh. Cualquiera de estos archivos se superpondrá a este espacio de trabajo en la parte superior de su entorno. Para más información consulte la documentación general de catkin: catkin. Antes de continuar genere su nuevo archivo setup.*sh:
+
+```bash
+source devel/setup.bash
+```
+
+Para asegurarse de que su espacio de trabajo es superpuesto correctamente por el script de instalación, asegúrese de que la variable de entorno ROS_PACKAGE_PATH incluye el directorio en el que se encuentra.
+
+```bash
+echo $ROS_PACKAGE_PATH
+```
+La salida deberia ser la siguiente:
+```
+/workspace/catkin_ws/src:/opt/ros/noetic/share
+```
+
+
 
 ### Ejemplo de un entorno de ROS
 En esta primera parte nos vamos a servir de los tutoriales básicos que trae la instalación de ROS para entender su funcionamiento básico de `nodos` y `topics`. 

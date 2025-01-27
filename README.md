@@ -1,19 +1,19 @@
 # Práctica 1:  Aprendiendo las bases de ROS
 
-ROS es una colección de software de código abierto destinado al desarrollo de robots, que ofrece características parecidas a las de un sistema operativo en un conjunto de ordenadores diverso. La meta principal de ROS es respaldar el reaprovechamiento de código en la investigación y el desarrollo de robótica como un instrumento autónomo del lenguaje y la plataforma. Actualmente, ROS solo se puede ejecutar en plataformas que utilizan Unix. En este ejercicio de laboratorio, abordaremos algunas nociones fundamentales de ROS e interactuaremos con un sistema ROS en operación.
+ROS es una colección de software de código abierto destinado al desarrollo de robots, que ofrece características parecidas a las de un sistema operativo en un conjunto de ordenadores diverso. El objetivo principal de ROS es respaldar el reciclado de código en la investigación y el desarrollo de robótica como un instrumento autónomo del lenguaje y la plataforma. Actualmente, ROS solo se puede ejecutar en plataformas que utilizan Unix (Al menos las versiones de ROS 1, ROS 2 ya se puede integrar en IOS y Windows). En esta práctica, abordaremos algunas nociones fundamentales de ROS e interactuaremos con un sistema ROS en ejecución.
 
 ## Instalación
-Para la realización de esta práctica y las sucesivas, se han generado varios `Dockerfile` que serán los encargados de generar las imágenes de ROS para poder trabajar con ellas. Esto nos va a permitir generar contenedores de `Docker` con dichas imágenes, de forma que, podamos tener todas las dependencias y librerias contenezidas dentro de nuestro sistema operativo (Ubuntu 24.04 LTS), evitando así incompatibilidades con otras aplicaciones. 
+Para la realización de esta práctica y las sucesivas, se han generado varios `Dockerfile` que serán los encargados de generar las imágenes de ROS para poder trabajar con ellas. Esto nos va a permitir generar contenedores de `Docker` con dichas imágenes, de forma que, podamos tener todas las dependencias y librerías contenidas dentro de nuestro sistema operativo (Ubuntu 24.04 LTS), evitando así incompatibilidades con otras aplicaciones. 
 
-Para poder trabajar con los contenedores de `Docker` y ROS es necesario antes de comenzar, es necesario realizar los pasos que se encuentran en el documento [Instalacion.md](Instalacion.md) dentro de este repositorio. Este documento contiene la guía de instalación con las heramientas necesarias para poder ejecutar las prácticas de la asignatura.
+Para poder trabajar con los contenedores de `Docker` y ROS es necesario antes de comenzar, realizar los pasos que se encuentran en el documento [Instalacion.md](Instalacion.md) dentro de este repositorio. Este documento contiene la guía de instalación con las herramientas necesarias para poder ejecutar las prácticas de la asignatura.
 
-Para comenzar con la instalación de ROS dentro de un contenedor `Docker` se requiere de abrir una terminal dentro de la carpeta que contenga esta práctica y ejecutar los siguientes comandos:
+Para comenzar con la instalación de ROS dentro de un contenedor `Docker` se requiere abrir una terminal dentro de la carpeta que contenga esta práctica y ejecutar los siguientes comandos:
 
 1. Crear y construir la imágen de ROS Noetic a través del `Dockerfile`:
 ```bash
 docker build -t ros_noetic:latest.
 ```
-Este comando comenzará la instalación de ROS en su Distro Noetic
+Este comando comenzará la instalación de ROS en su Distro Noetic.
 
 2. Una vez instalado ROS ya podemos ejecutar el contenedor y conectarnos a él de la siguiente manera:
 ```bash
@@ -31,27 +31,27 @@ sudo chmod u+x connect_ros.sh # Solo la primera vez para dar los permisos necesa
 ## Parte 1: Primeros Pasos con ROS
 
 ### Creación del espacio de Trabajo en ROS
-Cuando se trabaja con el código fuente de ROS, a menudo es útil hacerlo en un `workspace` (Espacio de trabajo). Para crear un espacio de trabajo ROS lo único que tenemos que hacer es navegar hasta el directorio en el que queramos crear el espacio de trabajo y ejecutar los comando que aparecen a
-continuación. Se recomienda crearlo en la carpeta raíz de nuestro espacio de trabajo en el contenedor de `Docker` y con el nombre `catkin_ws`.
+Cuando se trabaja con el código fuente de ROS, a menudo es útil hacerlo en un `workspace` (Espacio de trabajo). Para crear un espacio de trabajo ROS lo único que tenemos que hacer es navegar hasta el directorio en el que queramos crear el espacio de trabajo y ejecutar los comandos que aparecen a
+continuación. Se recomienda crearlo en la carpeta raíz de nuestro espacio de trabajo en el contenedor de `Docker` y con el nombre `catkin_ws`, de la siguiente manera:
 ```bash
 mkdir -p catkin_ws/src
 cd catkin_ws/
 catkin_make
 ```
-El comando [catkin_make](https://wiki.ros.org/catkin/commands/catkin_make) es una herramienta práctica para trabajar con [espacios de trabajo catkin](https://wiki.ros.org/catkin/workspaces). Ejecutándolo la primera vez en su espacio de trabajo, creará un enlace *CMakeLists.txt* en su carpeta `src`.
+El comando [catkin_make](https://wiki.ros.org/catkin/commands/catkin_make) es una herramienta práctica para trabajar con [espacios de trabajo catkin](https://wiki.ros.org/catkin/workspaces). Ejecutándolo la primera vez en tu espacio de trabajo, creará un enlace *CMakeLists.txt* en tu carpeta `src`.
 
-Además, si miras en tu directorio actual ahora deberías tener una carpeta 'build' y 'devel'. Dentro de la carpeta 'devel' puedes ver que ahora hay varios archivos `setup.*sh`. Cualquiera de estos archivos se superpondrá a este espacio de trabajo en la parte superior de su entorno. Para más información consulte la documentación general de catkin: catkin. Antes de continuar genere su nuevo archivo `setup.*sh`:
+Además, si miras en tu directorio actual ahora deberías tener una carpeta 'build' y 'devel'. Dentro de la carpeta 'devel' puedes ver que ahora hay varios archivos `setup.*sh`. Cualquiera de estos archivos se superpondrá a este espacio de trabajo en la parte superior de tu entorno. Para más información consulta la documentación general de [catkin](http://wiki.ros.org/catkin/Tutorials). Antes de continuar ejecuta tu nuevo archivo `setup.*sh`:
 
 ```bash
 source devel/setup.bash
 ```
 
-Para asegurarse de que su espacio de trabajo es superpuesto correctamente por el script de instalación, asegúrese de que la variable de entorno ROS_PACKAGE_PATH incluye el directorio en el que se encuentra.
+Para asegurarte de que tu espacio de trabajo es superpuesto correctamente por el script de instalación, asegúrate de que la variable de entorno ROS_PACKAGE_PATH incluye el directorio en el que se encuentra.
 
 ```bash
 echo $ROS_PACKAGE_PATH
 ```
-La salida deberia ser la siguiente:
+La salida debería ser la siguiente:
 ```
 /workspace/catkin_ws/src:/opt/ros/noetic/share
 ```
@@ -59,7 +59,7 @@ La salida deberia ser la siguiente:
 
 
 ### Ejemplo de un entorno de ROS
-En esta primera parte nos vamos a servir de los tutoriales básicos que trae la instalación de ROS para entender su funcionamiento básico de `nodos` y `topics`. 
+En esta primera parte nos vamos a servir de los tutoriales básicos que trae la instalación de ROS para entender el funcionamiento básico de `nodos` y `topics`. 
 Para ello, vamos a seguir las siguientes instrucciones dentro del contenedor de `Docker` generado anteriormente:
 - Terminal 1:
 ```bash
@@ -78,7 +78,7 @@ Revisa la siguiente documentación ([ROS Nodes](https://wiki.ros.org/ROS/Tutoria
 > Pregunta 2: ¿Qué podemos saber sobre el topic que publica el nodo que acabamos de lanzar?
 
 - Terminal 3:
-El siguiente paso es crear un suscriptor al topic que está publicando en nodo `/talker` (`/chatter`). Para ello lanzaremos otro nodo, el nodo `/listener`.
+El siguiente paso es crear un suscriptor al topic que está publicando en el nodo `/talker` (`/chatter`). Para ello lanzaremos otro nodo, el nodo `/listener`.
 ```bash
 rosrun rospy_tutorials listener
 ```
@@ -86,7 +86,7 @@ rosrun rospy_tutorials listener
 >
 > Pregunta 4: ¿Qué ha sucedido ahora en el topic /chatter?
 
-Dentro de ROS existen multitud de herramientas ya  implementadas para ayudarnos a conocer mejor el entorno en el que se está trabajando. Entre ellas se encuentra la herramienta [rqt](http://wiki.ros.org/rqt). Dentro de `rqt` tenemos una herramienta que nos permite ver la interconexión entre los diferentes nodos, `rqt_graph`, que para lanzarla solo tenemos que escribir en una nueva Terminal lo siguiente:
+Dentro de ROS existen multitud de herramientas ya  implementadas para ayudarnos a conocer mejor el entorno en el que se está trabajando. Entre ellas se encuentra la herramienta [rqt](http://wiki.ros.org/rqt). Dentro de `rqt` tenemos otra herramienta que nos permite ver la interconexión entre los diferentes nodos, `rqt_graph`. Para lanzarla, solo tenemos que escribir en una nueva Terminal lo siguiente:
 
 - Terminal 4: 
 ```bash
@@ -98,7 +98,7 @@ entorno de ROS
 > Pregunta 5: ¿Qué podemos saber a partir de este gráfico?
 
 ### Creando un Servicio en ROS
-A continuación, se va a crear un servicio que nos va a sumar dos enteros. Para ello copia la carpeta `servicio_suma` en `~/catkin_ws/src`. A continuación, ejecuta catkin_make desde la terminal, dentro de la carpeta `~/catkin_ws`. De esta forma ya habremos creado el servicio que nos va a permitir sumar dos enteros. Ahora lanza el `rosmaster` y ejecuta los siguientes comandos en otra Terminal:
+A continuación, se va a crear un servicio que nos va a sumar dos enteros. Para ello copia la carpeta `servicio_suma` en `~/catkin_ws/src`. Seguidamente, ejecuta `catkin_make` desde la terminal, dentro de la carpeta `~/catkin_ws`. De esta forma ya habremos creado el servicio que nos va a permitir sumar dos enteros. Ahora lanza el `rosmaster` y ejecuta los siguientes comandos en otra Terminal:
 ```bash
 rossrv list
 rossrv show servicio_suma/AddTwoInts
@@ -109,24 +109,24 @@ rosrun servicio_suma add_two_ints_client.py 3 7
 > Pregunta 6: ¿Qué puedes comentar acerca de este servicio?
 
 ### Ejercicios
-1. Publica desde la terminal un mensaje, con la cadena de caracteres que desees, al topic `/chatter` y para que este sea leído por el nodo `/listener`. Escribe los comandos que has tenido que ejecutar para que esto suceda. Ten en cuenta que el nodo ROS master no está lanzado todavía.
+1. Publica desde la terminal un mensaje, con la cadena de caracteres que desees al topic `/chatter`, para que este sea leído por el nodo `/listener`. Escribe los comandos que has tenido que ejecutar para que esto suceda. Ten en cuenta que el nodo ROS master no está lanzado todavía.
 
 2. Cambia el servicio `servicio_suma` para que haga la suma de tres enteros. Describe que has tenido que hacer y los archivos que has tenido que modificar.
 
 ## Parte 2: Primeros Pasos con ROS
-Anteriormente se ha explicado como se crea un espacio de trabajo ROS, a continuación el objetivo es aprender a generar paquetes ROS y crear mensajes para que otros nodos publiquen este tipo de mensajes. Asimismo, se explicará como crear archivos `*.launch`, los cuales permiten lanzar varios nodos a la vez. 
+Anteriormente se ha explicado cómo se crea un espacio de trabajo ROS. A continuación, el objetivo es aprender a generar paquetes ROS y crear mensajes para que otros nodos publiquen este tipo de mensajes. Asimismo, se explicará cómo crear archivos `*.launch`, los cuales permiten lanzar varios nodos a la vez. 
 
 ### Crear un Paquete de ROS
-El software en ROS se organiza en paquetes. Un paquete puede contener nodos ROS, una biblioteca independiente de ROS, un conjunto de datos, archivos de configuración, una pieza de software de terceros, o cualquier otra cosa que lógicamente constituya un módulo útil. El objetivo de estos paquetes es proporcionar esta funcionalidad útil de una manera fácil de consumir para que el software pueda ser fácilmente reutilizado. En general, los paquetes ROS siguen el principio de "Ricitos de oro": suficiente funcionalidad para ser útil, pero no demasiada para que el paquete sea pesado y difícil de usar desde otro software.
+El software en ROS se organiza en paquetes. Un paquete puede contener nodos ROS, una biblioteca independiente de ROS, un conjunto de datos, archivos de configuración, una herramienta de software de terceros, o cualquier otra cosa que lógicamente constituya un módulo útil. El objetivo de estos paquetes es proporcionar esta funcionalidad útil de una manera fácil de consumir para que el software pueda ser fácilmente reutilizado. En general, los paquetes ROS siguen el principio de "Ricitos de oro": suficiente funcionalidad para ser útil, pero no demasiada para que el paquete sea pesado y difícil de usar desde otro software.
 
 Los paquetes de ROS requieren de una serie de ficheros específicos para poder
-realizar la compilación de dicho paquete. Para ello, se puede hacer a mano o emplear la herramienta `catkin_create_pkg` que genera automáticamente toda esa estructura de paquete ROS. Este comando debe ser lanzado desde la carpeta `src/` del espacio de trabajo.
+realizar la compilación de dicho paquete. Para ello, se puede hacer a mano o emplear la herramienta `catkin_create_pkg`, que genera automáticamente toda esa estructura de paquete ROS. Este comando debe ser lanzado desde la carpeta `src/` del espacio de trabajo.
 ```bash
 cd catkin_ws/src
 catkin_create_pkg primer_paquete rospy std_msgs
 ```
 
-Inicialmente, como se va a estar desarrollando código con Python se ha generado este paquete mediante las dependencias `rospy`. Además, se ha añadido al paquete la dependencia de a los mensajes estándares de ROS, `std_msgs`. A continuación, se va a compilar este paquete, aunque el paquete todavía esté vacío, mediante el siguiente comando. Este comando debe ser ejecutado desde alguna de las carpetas del espacio de trabajo.
+Inicialmente, como se va a estar desarrollando código con `Python`, se ha generado este paquete mediante las dependencias `rospy`. Además, se ha añadido al paquete la dependencia a los mensajes estándares de ROS, `std_msgs`. A continuación, se va a compilar este paquete, aunque el paquete todavía esté vacío, mediante el siguiente comando. Este comando debe ser ejecutado desde alguna de las carpetas del espacio de trabajo, recomendablemente desde la raíz del espacio de trabajo `catkin_ws`:
 
 ```bash
 catkin_make
@@ -161,7 +161,7 @@ generate_messages(DEPENDENCIES std_msgs)
 catkin_package(... CATKIN_DEPENS message_runtime ...)
 ```
 
-Una vez hechas estas modificaciones, el siguiente paso es volver a compilar el paquete mediante catkin_make primer_paquete (siempre en la raiz de `/catkin_ws/`), de esta forma si hay varios paquetes no perderemos tiempo recompilando el resto. Tras compilar correctamente el paquete, debemos actualizar las dependencias del espacio de trabajo ejecutando `source devel/setup.bash`. Si el mensaje ha sido creado correctamente, podremos saber de qué tipo es el mensaje creado a través de la terminal.
+Una vez hechas estas modificaciones, el siguiente paso es volver a compilar el paquete mediante `catkin_make primer_paquete` (siempre en la raiz de `/catkin_ws/`), de esta forma si hay varios paquetes no perderemos tiempo recompilando el resto. Tras compilar correctamente el paquete, debemos actualizar las dependencias del espacio de trabajo ejecutando `source devel/setup.bash`. Si el mensaje ha sido creado correctamente, podremos saber de qué tipo es el mensaje creado a través de la terminal.
 
 > Pregunta 2: ¿Qué comando se debe utilizar? (Pista: [rosmsg](https://wiki.ros.org/rosmsg))
 
@@ -239,7 +239,7 @@ Ahora solo nos queda hacer ejecutables estos ficheros, lanzar el ROSMaster (rosc
 ### Crear un archivo launch
 [`roslaunch`](http://wiki.ros.org/es/roslaunch) es una herramienta para lanzar fácilmente múltiples nodos ROS local y remotamente vía SSH, así como para establecer parámetros en el Servidor de Parámetros. Incluye opciones para reiniciar automáticamente los procesos que ya han muerto. `roslaunch` toma uno o más archivos de configuración XML (con la extensión .launch) que especifican los parámetros a establecer y los nodos a lanzar, así como las máquinas en las que se deben ejecutar.
 
-Los nodos que se han lanzado anteriormente, han tenido que ser lanzados de forma independiente en terminales separadas, sin embargo, los podemos lanzar a la vez simplemente generado un archivo `.launch`. Para ello, es necesario generar la carpeta `launch/` que albergará los archivos de esta naturaleza, de la siguiente manera:
+Los nodos que se han lanzado anteriormente, han tenido que ser lanzados de forma independiente en terminales separadas. Sin embargo, los podemos lanzar a la vez simplemente generado un archivo `.launch`. Para ello, es necesario generar la carpeta `launch/` que albergará los archivos de esta naturaleza, de la siguiente manera:
 ```bash
 cd catkin_ws/src/primer_paquete
 mkdir launch && cd launch
@@ -287,13 +287,13 @@ posicion.orientation.x = random()
 4. Crea otro fichero llamado `launch_ejercicio4.launch` que agrupe estos dos nodos dentro de un mismo grupo, llamado `miGrupo`. Haz uso de la etiqueta `remap` para que el topic también se encuentre dentro de ese grupo. (Pista: [`group`](http://wiki.ros.org/roslaunch/XML/group), [`remap`](http://wiki.ros.org/roslaunch/XML/remap))
 
 ## Parte 3: Acciones en ROS
-En cualquier gran sistema basado en ROS, hay casos en los que a alguien le gustaría enviar una solicitud a un nodo para realizar alguna tarea, y también recibir una respuesta a la solicitud. Esto se puede conseguir actualmente a través de los `servicios` ROS.
+En cualquier gran sistema basado en ROS, hay casos en los que a algún usuario le gustaría enviar una solicitud a un nodo para realizar alguna tarea, y también recibir una respuesta a la solicitud. Esto se puede conseguir a través de los `servicios` ROS.
 
-En algunos casos, sin embargo, si el servicio tarda mucho tiempo en ejecutarse, el usuario podría querer la posibilidad de cancelar la solicitud durante la ejecución u obtener información periódica acerca de cómo está progresando la solicitud. Las acciones en ROS permiten crear servicios que ejecuten objetivos de larga duración que puedan ser adelantados. También proporciona una interfaz de cliente para enviar solicitudes al servidor. El cliente y el servidor se comunican mediante un protocolo desarrollado para este
+En algunos casos, sin embargo, si el servicio tarda mucho tiempo en ejecutarse, el usuario podría querer disponer de la posibilidad de cancelar la solicitud durante la ejecución u obtener información periódica acerca de cómo está progresando la solicitud. Las acciones en ROS permiten crear servicios que ejecuten objetivos de larga duración que puedan ser adelantados. También proporciona una `interfaz de cliente` para enviar solicitudes al `servidor`. El `cliente` y el `servidor` se comunican mediante un protocolo desarrollado para este
 fin, basado en mensajes ROS.
 
-En esta parte, se va a aprender la manera en la que se programa una acción
-tanto la parte servidor como la parte cliente. Esta acción va a calcular la serie de Fibonacci de una longitud n.
+En esta parte, se va a aprender la manera en la que se programa una acción,
+tanto la parte del `servidor` como la parte del `cliente`. Esta acción va a calcular la serie de Fibonacci de una longitud n.
 
 ### Crear un mensaje de tipo Action
 Para empezar, vamos a crear un paquete llamado `mi_accion` con dependencias a `rospy` y `std_msgs`. Como sabemos, antes de crear una acción es importante definir los mensajes de objetivo (`goal`), realimentación (`feedback`) y resultado (`result`). Estos mensajes se generan automáticamente desde un fichero `*.action`. Para este ejercicio vamos a crear un fichero llamado `Fibonacci.action` definido de la siguiente manera:
@@ -337,11 +337,11 @@ ls devel/share/mi_accion/msg
 ls devel/include/mi_accion
 ```
 
-> Pregunta 1: A partir de la información del fichero `actionFib.action`, ¿cuál es el tipo de mensaje que se esperará el servidor para comenzar a realizar la acción?, ¿y el tipo de mensaje que esperará el cliente como resultado?, ¿y qué tipo de mensaje se enviará como realimentación?
+> Pregunta 1: A partir de la información del fichero `actionFib.action`, ¿cuál es el tipo de mensaje que se esperará el servidor para comenzar a realizar la acción?, ¿Y el tipo de mensaje que esperará el cliente como resultado?, ¿Qué tipo de mensaje se enviará como realimentación?
 
 ### Server Action
 
-Una vez creados los mensajes que se van a intercambiar servidor y cliente, vamos a ver como se crea un servidor. Para ello creamos un fichero llamado `fib_server.py` y copiamos el siguiente código:
+Una vez creados los mensajes que se van a intercambiar servidor y cliente, veamos cómo se crea un servidor. Para ello, crea un fichero llamado `fib_server.py` y copia el siguiente código:
 
 ```python
 #! /usr/bin/env python
@@ -392,7 +392,7 @@ if __name__ == '__main__':
 
 Se pueden observar varias cosas en este fichero. Primero, hemos importado `actionlib`, para poder hacer uso de `SimpleActionServer`, y `mi_accion.msg`, y así hacer uso de los mensajes relacionados con la acción. Por otro lado, en el `main` creamos el objeto server que pertenece a la clase `FibonnaciAction`, donde se va a definir la funcionalidad de la acción. Y finalmente, dentro de la clase `FibonnaciAction`, hay definida una función llamada `execute_cb` que es la que se va a lanzar cuando se le mande un objetivo a la acción.
 
-Ahora que ya sabemos esto, vamos a lanzar el nodo servidor para estudiar que ocurre:
+Ahora que ya conocemos esto, vamos a lanzar el nodo servidor para estudiar qué ocurre:
 
 ```bash
 rosrun mi_accion fib_server.py
@@ -404,7 +404,7 @@ rosrun mi_accion fib_server.py
 esta acción?
 
 ### Client Action
-Ahora que ya hemos creado el servidor, el siguiente paso es crear el cliente para poder lanzar la acción desde un nodo. Por ello, vamos a crear un fichero llamado `fib_client.py` donde vamos a copiar el siguiente código:
+Ahora que ya hemos creado el servidor, el siguiente paso es crear el cliente para poder lanzar la acción desde un nodo. Por ello, vamos a crear un fichero llamado `fib_client.py` donde copiaremos el siguiente código:
 ```python
 #! /usr/bin/env python
 import rospy
@@ -448,14 +448,14 @@ Ahora, vamos a lanzar el nodo para comprobar que, efectivamente, este nodo lanza
 rosrun mi_accion fib_client.py
 ```
 
-> Pregunta 4: ¿Dónde se puede observar la realimentación que nos está ofreciendo el Servidor? ¿Y el resultado?
+> Pregunta 4: ¿Dónde se puede observar la realimentación que nos está ofreciendo el servidor? ¿Y el resultado?
 >
 > Pregunta 5: Si paramos el nodo a mitad de la ejecución de la acción, ¿se cancela la acción? ¿Cómo cancelarías la acción?
 
 ### Ejercicios
 
-1. Genera una nueva acción, `ejFibonacci.action` donde el goal y el `result` sean el mismo que `Fibonacci.action`, pero el feedback sea de tipo float32.
+1. Genera una nueva acción, `ejFibonacci.action` donde el `goal` y el `result` sean el mismo que `Fibonacci.action`, pero el feedback sea de tipo float32.
 
-2. Crea un fichero `ejercicios_fibServer.py` que sea el servidor de la acción ejFibonacci para que se comporte igual que `fib_server.py`, con la diferencia de que el feedback ha de ser la media de la secuencia de Fibonacci que se está calculando en cada iteración.
+2. Crea un fichero `ejercicios_fibServer.py` que sea el servidor de la acción `ejFibonacci` para que se comporte igual que `fib_server.py`, con la diferencia de que el feedback ha de ser la media de la secuencia de Fibonacci que se está calculando en cada iteración.
 
-3. Crea un fichero `ejercicios_fibClient.py` que sea el nodo cliente de la acción, para que elorden de la de la secuencia sea modificable a través de un parámetro de entrada. Este nodo cliente publicar la frase ‘en proceso’ a un topic llamado `/estado_accion` mientras la acción esté en proceso. Finalmente, debe mostrar el resultado obtenido de la acción por pantalla.
+3. Crea un fichero `ejercicios_fibClient.py` que sea el nodo cliente de la acción, para que el orden de la secuencia sea modificable a través de un parámetro de entrada. Este nodo cliente publicar la frase ‘en proceso’ a un topic llamado `/estado_accion` mientras la acción esté en proceso. Finalmente, debe mostrar el resultado obtenido de la acción por pantalla.

@@ -15,19 +15,19 @@ docker build -t ros_noetic:latest .
 ```
 Este comando comenzará la instalación de ROS en su Distro Noetic.
 
-2. Una vez instalado ROS ya podemos ejecutar el contenedor y conectarnos a él de la siguiente manera:
+2. Una vez instalado ROS ya podemos ejecutar el contenedor y conectarnos a él de la siguiente manera **sin usar Nvidia-Docker**:
 ```bash
 sudo chmod u+x run.sh # Solo la primera vez para dar los permisos necesarios
 ./run.sh 
 ```
-Si no tenemos nvidia-docker instalado, el comando anterior no va a funcionar. En ese caso ejecuta lo siguiente:
+Si tenemos `nvidia-docker` instalado, podemos hacer que ROS emplee la GPU de nuestro dispositivo. En ese caso ejecuta lo siguiente:
 ```bash
-sudo chmod u+x run_no_nvidia.sh # Solo la primera vez para dar los permisos necesarios
+sudo chmod u+x run_nvidia.sh # Solo la primera vez para dar los permisos necesarios
 ./run_no_nvidia.sh 
 ```
 Ya estaremos dentro del contenedor y podremos empezar a trabajar con ROS.
 
-3. Para conectarnos al contenedor desde nuevas terminales, ejecutar:
+3. Para conectarnos al contenedor desde nuevas terminales una vez lanzado el contenedor, ejecutar:
 ```bash
 sudo chmod u+x connect_ros.sh # Solo la primera vez para dar los permisos necesarios
 ./connect_ros.sh

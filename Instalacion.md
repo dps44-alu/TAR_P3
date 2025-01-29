@@ -142,7 +142,7 @@ Para instalar la última versión, ejecuta:
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
-Para instalar la una versión específica, ejecuta:
+Para instalar la una versión específica, ejecuta (**OPCIONAL**: Solo si necesitas una versión en específico para tu sistema):
 ```bash
 # List the available versions:
 apt-cache madison docker-ce | awk '{ print $3 }'
@@ -251,7 +251,7 @@ curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dear
     sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
 ```
 
-Opcionalmente, configura el repositorio para utilizar paquetes experimentales:
+Opcionalmente, configura el repositorio para utilizar paquetes experimentales (**ESTE PASO NO ES OBLIGATORIO** solo si quieres probar paquetes experimentales):
 ```bash
 sed -i -e '/experimental/ s/^#//g' /etc/apt/sources.list.d/nvidia-container-toolkit.list
 ```

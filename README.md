@@ -459,3 +459,6 @@ rosrun mi_accion fib_client.py
 2. Crea un fichero `ejercicios_fibServer.py` que sea el servidor de la acción `ejFibonacci` para que se comporte igual que `fib_server.py`, con la diferencia de que el feedback ha de ser la media de la secuencia de Fibonacci que se está calculando en cada iteración.
 
 3. Crea un fichero `ejercicios_fibClient.py` que sea el nodo cliente de la acción, para que el orden de la secuencia sea modificable a través de un parámetro de entrada. Este nodo cliente publicar la frase ‘en proceso’ a un topic llamado `/estado_accion` mientras la acción esté en proceso. Finalmente, debe mostrar el resultado obtenido de la acción por pantalla.
+
+## Entrega
+La entrega de esta práctica se realizará a través de la herramienta de 'Evaluación' de UaCloud. La entrega debe ser una memoria en formato `.pdf` en la cual se encuentren las respuestas a las preguntas teóricas y a los ejercicios propuestos de las diferentes partes. La entrega deberá tener el nombre de *Apellidos_Nombre.pdf*. 

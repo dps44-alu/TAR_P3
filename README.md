@@ -51,6 +51,15 @@ Además, si miras en tu directorio actual ahora deberías tener una carpeta 'bui
 source devel/setup.bash
 ```
 
+**IMPORTANTE**: Cada vez que entremos en el contenedor de ROS ya sea ejecutando `./run.sh` (o si usamos nvidia-docker `./run_nvidia.sh`) o si accedemos al contenedor, una vez lanzado por el script anterior, en nuevas terminales para ejecutar diferentes herramientas de ROS ejecutando `./connect_ros.sh`, necesitamos que nuestro sistema tenga conocimiento de las variables del entorno, por ello es necesario ejecutar siempre el comando anterior de la siguiente manera:
+```bash
+cd catkin_ws/
+source devel/setup.bash
+```
+
+
+
+
 Para asegurarte de que tu espacio de trabajo es superpuesto correctamente por el script de instalación, asegúrate de que la variable de entorno ROS_PACKAGE_PATH incluye el directorio en el que se encuentra.
 
 ```bash

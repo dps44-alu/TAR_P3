@@ -20,6 +20,11 @@ Este comando comenzará la instalación de ROS en su Distro Noetic.
 sudo chmod u+x run.sh # Solo la primera vez para dar los permisos necesarios
 ./run.sh 
 ```
+Si no tenemos nvidia-docker instalado, el comando anterior no va a funcionar. En ese caso ejecuta lo siguiente:
+```bash
+sudo chmod u+x run_no_nvidia.sh # Solo la primera vez para dar los permisos necesarios
+./run_no_nvidia.sh 
+```
 Ya estaremos dentro del contenedor y podremos empezar a trabajar con ROS.
 
 3. Para conectarnos al contenedor desde nuevas terminales, ejecutar:

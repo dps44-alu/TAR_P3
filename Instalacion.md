@@ -112,7 +112,7 @@ Puedes instalar `Docker Engine` de diferentes maneras, dependiendo de tus necesi
 
 - Utilice un [script de conveniencia](https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script). Sólo se recomienda para entornos de pruebas y desarrollo.
 
-En este caso se ha optado por instalar mediante el repositorio `apt`si desea usar otro método de instalación puede redirigirse mediante los enlaces anteriores.
+En este caso se ha optado por instalar mediante el repositorio `apt`, si desea usar otro método de instalación puede redirigirse mediante los enlaces anteriores.
 
 #### Instalar utilizando el repositorio `apt`
 Antes de instalar `Docker Engine` por primera vez en un nuevo equipo host, es necesario configurar el repositorio apt de Docker. Después, puedes instalar y actualizar Docker desde el repositorio.

@@ -11,7 +11,7 @@ Para comenzar con la instalación de ROS dentro de un contenedor `Docker` se req
 
 1. Crear y construir la imágen de ROS Noetic a través del `Dockerfile`:
 ```bash
-docker build -t ros_noetic:latest.
+docker build -t ros_noetic:latest .
 ```
 Este comando comenzará la instalación de ROS en su Distro Noetic.
 

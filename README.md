@@ -51,12 +51,23 @@ Además, si miras en tu directorio actual ahora deberías tener una carpeta 'bui
 source devel/setup.bash
 ```
 
-**IMPORTANTE**: Cada vez que entremos en el contenedor de ROS ya sea ejecutando `./run.sh` (o si usamos nvidia-docker `./run_nvidia.sh`) o si accedemos al contenedor, una vez lanzado por el script anterior, en nuevas terminales para ejecutar diferentes herramientas de ROS ejecutando `./connect_ros.sh`, necesitamos que nuestro sistema tenga conocimiento de las variables del entorno, por ello es necesario ejecutar siempre el comando anterior de la siguiente manera:
+**IMPORTANTE**: Cada vez que entremos en el contenedor de ROS ya sea ejecutando `./run.sh` (o si usamos nvidia-docker `./run_nvidia.sh`) o si accedemos al contenedor, una vez lanzado por el script anterior, en nuevas terminales para ejecutar diferentes herramientas de ROS ejecutando `./connect_ros.sh`, necesitamos que nuestro sistema tenga conocimiento de las variables del entorno. Para evitar tener que ejecutar siempre los mismos comandos constantemente cada vez que iniciamos el contenedor o generamos una nueva terminal, debemos ejecutar lo siguiente:
+
+1. Configurar el archivo `~/.bashrc` para que automáticamente establezca las variables de entorno en nuestro espacio de trabajo `catkin_ws`:
 ```bash
-cd catkin_ws/
-source devel/setup.bash
+nano ~/.bashrc
 ```
 
+2. Dentro de este archivo en la última línea escribiremos lo siguiente:
+```bash
+source /workspace/catkin_ws/devel/setup.bash
+```
+
+3. Guardaremos el archivo actualizado. No obstante, esto no asegura que cada vez que ejecutemos de nuevo el contenedor, esta actualización se haya guardado. Esto se debe a que el contenedor se resetea cada vez que se cierra para evitar actualizarse automáticamente y que pueda que haya incompatibilidades en algún momento con algún cambio que hagamos, de esta forma, si hay algo que hemos tocado que haga una incompatibilidad, con cerrar y volver a lanzar el contenedor sería suficiente. En este caso, sí que nos interesa que el cambio se mantenga, por tanto, abriremos una nueva terminal (sin haber salido y cerrado el contenedor) y ejecutaremos el siguiente comando:
+```bash
+docker commit ros_noetic ros_noetic:latest
+```
+Y ya estaría, ya estaría guardado para siempre. (**NOTA:** Esto sirve a nivel genércio como se ha explicado para hacer que el contenedor mantenga todos los cambios. En el caso de archivos que se van a generar para las prácticas, esto no es necesario porque los archivos que se generen estarán guardados en nuestro dispositivo local y no integramente en nuestro contenedor únicamente.)
 
 
 
@@ -125,7 +136,7 @@ rosrun servicio_suma add_two_ints_client.py 3 7
 ### Ejercicios
 1. Publica desde la terminal un mensaje, con la cadena de caracteres que desees al topic `/chatter`, para que este sea leído por el nodo `/listener`. Escribe los comandos que has tenido que ejecutar para que esto suceda. Ten en cuenta que el nodo ROS master no está lanzado todavía.
 
-2. Cambia el servicio `servicio_suma` para que haga la suma de tres enteros. Describe que has tenido que hacer y los archivos que has tenido que modificar.
+2. Cambia el servicio `servicio_suma` para que haga la siguiente operación: `a + b - c * d / e`, siendo `a, b, c, d, e` valores enteros (`int64`) pasados por línea de comandos, el resultado debe estar en formato `float64`. Describe que has tenido que hacer y los archivos que has tenido que modificar.
 
 ## Parte 2: Primeros Pasos con ROS
 Anteriormente se ha explicado cómo se crea un espacio de trabajo ROS. A continuación, el objetivo es aprender a generar paquetes ROS y crear mensajes para que otros nodos publiquen este tipo de mensajes. Asimismo, se explicará cómo crear archivos `*.launch`, los cuales permiten lanzar varios nodos a la vez. 

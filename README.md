@@ -198,7 +198,7 @@ Para crear estos dos nodos, que vamos a desarrollar en Python, ejecutamos los si
 cd catkin_ws/src/primer_paquete/src
 touch nodo_envia.py
 touch nodo_recibe.py
-chmod u+x nodo_evia.py
+chmod u+x nodo_envia.py
 chmod u+x nodo_recibe
 ```
 
@@ -206,7 +206,7 @@ Y escribimos el siguiente código en cada uno de estos ficheros.
 
 - `nodo_recibe.py`:
 ```python
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import rospy
 from primer_paquete.msg import miMensaje
 
@@ -224,7 +224,7 @@ if __name__ == '__main__':
 
 - `nodo_envia.py`:
 ```python
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import rospy
 from primer_paquete.msg import miMensaje
 
@@ -290,7 +290,7 @@ A continuación, introducimos el siguiente código en el fichero `mi_launch.laun
 ```
 int32 numero
 geometry_msgs/Pose posicion
-string fecha=hoy
+string fecha
 ```
 
 Una vez definido, muestra los campos del mensaje usando el comando `rosmsg show`.
@@ -299,7 +299,7 @@ Una vez definido, muestra los campos del mensaje usando el comando `rosmsg show`
 
 El nodo `/nodopub_ejercicio2` debe tener un argumento de entrada que se asignará al campo numero del mensaje. Además, para enviar todos los valores del campo posición utiliza la función *random* del paquete *random* de Python.
 
-Ambos nodos deben mostrar por la terminal el valor del campo fecha, del campo numero, del campo `posicion.position.x` y del campo `posicion.orientation.w`
+Ambos nodos deben mostrar por la terminal el valor del campo fecha, del campo numero, del campo `posicion.position.x` y del campo `posicion.orientation.w`. En el caso del campo fecha, debes asignarle la fecha del día actual para que se muestre por pantalla.
 
 ```python
 # Pista:
@@ -307,7 +307,7 @@ from random import random
 posicion.orientation.x = random()
 ```
 
-3. Genera un fichero llamado `launch_ejercicio3.launch` que sea capaz de lanzar los nodos creados en el ejercicio anterior al mismo tiempo. El argumento de entrada se debe añadir desde el propio fichero launch, teniendo un valor por defecto de 3.
+3. Genera un fichero llamado `launch_ejercicio3.launch` que sea capaz de lanzar los nodos creados en el ejercicio anterior al mismo tiempo. El argumento de entrada se debe añadir por línea de comandos y tener un valor por defecto de 7 (Tienes que ver como hacer que el valor pasado por línea de comandos se guarde como argumento en el `launch`).
 
 4. Crea otro fichero llamado `launch_ejercicio4.launch` que agrupe estos dos nodos dentro de un mismo grupo, llamado `miGrupo`. Haz uso de la etiqueta `remap` para que el topic también se encuentre dentro de ese grupo. (Pista: [`group`](http://wiki.ros.org/roslaunch/XML/group), [`remap`](http://wiki.ros.org/roslaunch/XML/remap))
 
@@ -369,7 +369,7 @@ ls devel/include/mi_accion
 Una vez creados los mensajes que se van a intercambiar servidor y cliente, veamos cómo se crea un servidor. Para ello, crea un fichero llamado `fib_server.py` y copia el siguiente código:
 
 ```python
-#! /usr/bin/env python
+#! /usr/bin/env python3
 import rospy
 import actionlib
 import mi_accion.msg
@@ -431,7 +431,7 @@ esta acción?
 ### Client Action
 Ahora que ya hemos creado el servidor, el siguiente paso es crear el cliente para poder lanzar la acción desde un nodo. Por ello, vamos a crear un fichero llamado `fib_client.py` donde copiaremos el siguiente código:
 ```python
-#! /usr/bin/env python
+#! /usr/bin/env python3
 import rospy
 # Brings in the SimpleActionClient
 import actionlib
@@ -479,11 +479,11 @@ rosrun mi_accion fib_client.py
 
 ### Ejercicios
 
-1. Genera una nueva acción, `ejFibonacci.action` donde el `goal` y el `result` sean el mismo que `Fibonacci.action`, pero el feedback sea de tipo float32.
+1. Genera una nueva acción, `ejFibonacci.action` donde el `goal` y el `result` sean el mismo que `Fibonacci.action`, pero el `feedback` sea de tipo float64.
 
-2. Crea un fichero `ejercicios_fibServer.py` que sea el servidor de la acción `ejFibonacci` para que se comporte igual que `fib_server.py`, con la diferencia de que el feedback ha de ser la media de la secuencia de Fibonacci que se está calculando en cada iteración.
+2. Crea un fichero `ejercicios_fibServer.py` que sea el servidor de la acción `ejFibonacci` para que se comporte igual que `fib_server.py`, con la diferencia de que el `feedback` ha de ser la **raiz cuadrada de la media de la secuencia de Fibonacci** que se está calculando en cada iteración.
 
 3. Crea un fichero `ejercicios_fibClient.py` que sea el nodo cliente de la acción, para que el orden de la secuencia sea modificable a través de un parámetro de entrada. Este nodo cliente publicar la frase ‘en proceso’ a un topic llamado `/estado_accion` mientras la acción esté en proceso. Finalmente, debe mostrar el resultado obtenido de la acción por pantalla.
 
 ## Entrega
-La entrega de esta práctica se realizará a través de la herramienta de 'Evaluación' de UaCloud. La entrega debe ser una memoria en formato `.pdf` en la cual se encuentren las respuestas a las preguntas teóricas y a los ejercicios propuestos de las diferentes partes. La entrega deberá tener el nombre de *Apellidos_Nombre.pdf*. 
+La entrega de esta práctica se realizará a través de la herramienta de 'Evaluación' de UaCloud. La entrega debe ser una memoria en formato `.pdf` en la cual se encuentren las respuestas a las preguntas teóricas y a los ejercicios propuestos de las diferentes partes. La entrega deberá tener el nombre de *Apellidos_Nombre.pdf*. La entrega de esta práctica es **individual**.

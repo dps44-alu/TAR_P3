@@ -67,7 +67,7 @@ source /workspace/catkin_ws/devel/setup.bash
 ```bash
 docker commit ros_noetic ros_noetic:latest
 ```
-Y ya estaría, ya estaría guardado para siempre. (**NOTA:** Esto sirve a nivel genércio como se ha explicado para hacer que el contenedor mantenga todos los cambios. En el caso de archivos que se van a generar para las prácticas, esto no es necesario porque los archivos que se generen estarán guardados en nuestro dispositivo local y no integramente en nuestro contenedor únicamente.)
+Y ya estaría guardado para siempre. (**NOTA:** Esto sirve a nivel genérico como se ha explicado para hacer que el contenedor mantenga todos los cambios. En el caso de archivos que se van a generar para las prácticas, esto no es necesario porque los archivos que se generen estarán guardados en nuestro dispositivo local y no íntegramente en nuestro contenedor únicamente.)
 
 
 
@@ -81,7 +81,7 @@ La salida debería ser la siguiente:
 /workspace/catkin_ws/src:/opt/ros/noetic/share
 ```
 
-
+Para que los cambios se guarden correctamente, es necesario cerrar el contenedor y volver a lanzarlo.
 
 ### Ejemplo de un entorno de ROS
 En esta primera parte nos vamos a servir de los tutoriales básicos que trae la instalación de ROS para entender el funcionamiento básico de `nodos` y `topics`. 
@@ -123,11 +123,20 @@ entorno de ROS
 > Pregunta 5: ¿Qué podemos saber a partir de este gráfico?
 
 ### Creando un Servicio en ROS
-A continuación, se va a crear un servicio que nos va a sumar dos enteros. Para ello copia la carpeta `servicio_suma` en `~/catkin_ws/src`. Seguidamente, ejecuta `catkin_make` desde la terminal, dentro de la carpeta `~/catkin_ws`. De esta forma ya habremos creado el servicio que nos va a permitir sumar dos enteros. Ahora lanza el `rosmaster` y ejecuta los siguientes comandos en otra Terminal:
+A continuación, se va a crear un servicio que nos va a sumar dos enteros. Para ello copia la carpeta `servicio_suma` en `~/catkin_ws/src`. Seguidamente, ejecuta `catkin_make` desde la terminal, dentro de la carpeta `~/catkin_ws`. De esta forma ya habremos creado el servicio que nos va a permitir sumar dos enteros. Ahora lanza el `rosmaster` y ejecuta los siguientes comandos en otras Terminales:
+
+**NOTA:** Debes hacer que los archivos `add_two_ints_server.py` y `add_two_ints_client.py` sean ejecutables usando el comando `chmod u+x`.
+
+
+- Terminal 2:
 ```bash
 rossrv list
 rossrv show servicio_suma/AddTwoInts
 rosrun servicio_suma add_two_ints_server.py
+```
+
+- Terminal 3:
+```bash
 rosrun servicio_suma add_two_ints_client.py 3 7
 ```
 

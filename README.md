@@ -181,7 +181,7 @@ touch miMensaje.msg
 chmod u+x miMensaje.msg
 ```
 
-Una vez creado el fichero para crear el mensaje, lo editamos para que el paquete mensaje tenga los siguientes valores: `int32 x`, `int32 y`, `string  ombre=miNombre`. Tras modificar este fichero, debemos abrir el fichero `package.xml` del paquete y añadir las siguientes dependencias:
+Una vez creado el fichero para crear el mensaje, lo editamos para que el paquete mensaje tenga los siguientes valores: `int32 x`, `int32 y`, `string nombre=miNombre`. Tras modificar este fichero, debemos abrir el fichero `package.xml` del paquete y añadir las siguientes dependencias:
 ```xml
 <build_depend>message_generation</build_depend>
 <exec_depend>message_runtime</exec_depend>

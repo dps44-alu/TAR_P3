@@ -23,7 +23,7 @@ sudo chmod u+x run.sh # Solo la primera vez para dar los permisos necesarios
 Si tenemos `nvidia-docker` instalado, podemos hacer que ROS emplee la GPU de nuestro dispositivo. En ese caso ejecuta lo siguiente:
 ```bash
 sudo chmod u+x run_nvidia.sh # Solo la primera vez para dar los permisos necesarios
-./run_no_nvidia.sh 
+./run_nvidia.sh 
 ```
 Ya estaremos dentro del contenedor y podremos empezar a trabajar con ROS.
 

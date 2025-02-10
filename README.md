@@ -371,7 +371,7 @@ ls devel/share/mi_accion/msg
 ls devel/include/mi_accion
 ```
 
-> Pregunta 1: A partir de la información del fichero `actionFib.action`, ¿cuál es el tipo de mensaje que se esperará el servidor para comenzar a realizar la acción?, ¿Y el tipo de mensaje que esperará el cliente como resultado?, ¿Qué tipo de mensaje se enviará como realimentación?
+> Pregunta 1: A partir de la información del fichero `Fibonacci.action`, ¿cuál es el tipo de mensaje que se esperará el servidor para comenzar a realizar la acción?, ¿Y el tipo de mensaje que esperará el cliente como resultado?, ¿Qué tipo de mensaje se enviará como realimentación?
 
 ### Server Action
 

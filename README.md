@@ -208,7 +208,7 @@ cd catkin_ws/src/primer_paquete/src
 touch nodo_envia.py
 touch nodo_recibe.py
 chmod u+x nodo_envia.py
-chmod u+x nodo_recibe
+chmod u+x nodo_recibe.py
 ```
 
 Y escribimos el siguiente código en cada uno de estos ficheros.

@@ -1,5 +1,5 @@
 TECNOLOGÍA Y ARQUITECTURA ROBÓTICA. 
-Práctica 3.
+PRÁCTICA 3.
 
 Parte 1:
   - David Pérez Sampedro.

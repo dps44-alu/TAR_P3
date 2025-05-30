@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <world name="mi_mundo">
+    <!-- Luz -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- Plano del suelo -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+  </world>
+</sdf>
+

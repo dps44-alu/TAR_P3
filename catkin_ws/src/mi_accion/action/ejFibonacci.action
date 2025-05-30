@@ -1,0 +1,10 @@
+# Goal
+int32 orden
+
+---
+# Result
+int32[] secuencia_final
+
+---
+# Feedback
+float64 progreso

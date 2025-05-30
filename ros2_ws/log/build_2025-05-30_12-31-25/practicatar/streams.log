@@ -1,0 +1,23 @@
+[1.354s] Invoking command in '/workspace/ros2_ws/build/practicatar': PYTHONPATH=/workspace/ros2_ws/build/practicatar/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ros2_ws/install/practicatar/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspace/ros2_ws/build/practicatar/build --no-deps symlink_data
+[1.863s] running develop
+[2.148s] running egg_info
+[2.148s] creating practicatar.egg-info
+[2.148s] writing practicatar.egg-info/PKG-INFO
+[2.148s] writing dependency_links to practicatar.egg-info/dependency_links.txt
+[2.148s] writing entry points to practicatar.egg-info/entry_points.txt
+[2.149s] writing requirements to practicatar.egg-info/requires.txt
+[2.149s] writing top-level names to practicatar.egg-info/top_level.txt
+[2.149s] writing manifest file 'practicatar.egg-info/SOURCES.txt'
+[2.152s] reading manifest file 'practicatar.egg-info/SOURCES.txt'
+[2.153s] writing manifest file 'practicatar.egg-info/SOURCES.txt'
+[2.155s] running build_ext
+[2.156s] Creating /workspace/ros2_ws/install/practicatar/lib/python3.10/site-packages/practicatar.egg-link (link to .)
+[2.157s] 
+[2.158s] Installed /workspace/ros2_ws/build/practicatar
+[2.158s] running symlink_data
+[2.158s] creating /workspace/ros2_ws/install/practicatar/share/ament_index
+[2.158s] creating /workspace/ros2_ws/install/practicatar/share/ament_index/resource_index
+[2.158s] creating /workspace/ros2_ws/install/practicatar/share/ament_index/resource_index/packages
+[2.159s] symbolically linking /workspace/ros2_ws/build/practicatar/resource/practicatar -> /workspace/ros2_ws/install/practicatar/share/ament_index/resource_index/packages
+[2.159s] symbolically linking /workspace/ros2_ws/build/practicatar/package.xml -> /workspace/ros2_ws/install/practicatar/share/practicatar
+[2.220s] Invoked command in '/workspace/ros2_ws/build/practicatar' returned '0': PYTHONPATH=/workspace/ros2_ws/build/practicatar/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ros2_ws/install/practicatar/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspace/ros2_ws/build/practicatar/build --no-deps symlink_data

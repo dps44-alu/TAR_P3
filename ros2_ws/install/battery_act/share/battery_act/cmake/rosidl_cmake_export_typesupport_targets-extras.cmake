@@ -1,0 +1,1 @@
+/workspace/ros2_ws/build/battery_act/rosidl_cmake/rosidl_cmake_export_typesupport_targets-extras.cmake

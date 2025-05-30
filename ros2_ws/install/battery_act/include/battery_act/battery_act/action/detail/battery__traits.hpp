@@ -1,0 +1,1 @@
+/workspace/ros2_ws/build/battery_act/rosidl_generator_cpp/battery_act/action/detail/battery__traits.hpp

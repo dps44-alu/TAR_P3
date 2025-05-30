@@ -1,0 +1,12 @@
+package.xml
+setup.cfg
+setup.py
+practicatar/__init__.py
+practicatar.egg-info/PKG-INFO
+practicatar.egg-info/SOURCES.txt
+practicatar.egg-info/dependency_links.txt
+practicatar.egg-info/entry_points.txt
+practicatar.egg-info/requires.txt
+practicatar.egg-info/top_level.txt
+practicatar.egg-info/zip-safe
+resource/practicatar

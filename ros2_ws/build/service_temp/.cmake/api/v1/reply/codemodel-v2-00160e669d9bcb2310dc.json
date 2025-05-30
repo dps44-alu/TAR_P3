@@ -1,0 +1,233 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-befdaa95fb6e06d005ab.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				},
+				{
+					"build" : "service_temp__py",
+					"jsonFile" : "directory-service_temp__py-36f56371d14cd4d0d129.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/workspace/ros2_ws/build/service_temp/service_temp__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "service_temp",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_service_temp_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_service_temp_egg-037e9a611473d90f41ba.json",
+					"name" : "ament_cmake_python_build_service_temp_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_symlink_service_temp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_symlink_service_temp-f7a054c50f4bc33f50a2.json",
+					"name" : "ament_cmake_python_symlink_service_temp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "service_temp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-service_temp-2af0eb1b11df598df39a.json",
+					"name" : "service_temp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "service_temp__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-service_temp__cpp-1cf64afd877a02fb47b9.json",
+					"name" : "service_temp__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "service_temp__py::@22923c7679542a820878",
+					"jsonFile" : "target-service_temp__py-b2485b673c6a993f82c8.json",
+					"name" : "service_temp__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "service_temp__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-service_temp__rosidl_generator_c-f524de6275becf018d19.json",
+					"name" : "service_temp__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "service_temp__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-service_temp__rosidl_generator_py-1d4348ea53a1f5048880.json",
+					"name" : "service_temp__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "service_temp__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-service_temp__rosidl_typesupport_c-0da4abbe151e5283515b.json",
+					"name" : "service_temp__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "service_temp__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-service_temp__rosidl_typesupport_c__pyext-a791c6b87fdc5befd17d.json",
+					"name" : "service_temp__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "service_temp__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-service_temp__rosidl_typesupport_cpp-0c7e5f9d2ecadcc0564b.json",
+					"name" : "service_temp__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "service_temp__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-service_temp__rosidl_typesupport_fastrtps_c-d102db5f4d2c46cb7539.json",
+					"name" : "service_temp__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "service_temp__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-service_temp__rosidl_typesupport_fastrtps_c__pyext-745f22a0a85f4ce8b68c.json",
+					"name" : "service_temp__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "service_temp__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-service_temp__rosidl_typesupport_fastrtps_cpp-8739ebeec9a0b4451974.json",
+					"name" : "service_temp__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "service_temp__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-service_temp__rosidl_typesupport_introspection_c-5aa8435117d444b1f65a.json",
+					"name" : "service_temp__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "service_temp__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-service_temp__rosidl_typesupport_introspection_c__pyext-e5f56656edb830ed0a2a.json",
+					"name" : "service_temp__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "service_temp__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-service_temp__rosidl_typesupport_introspection_cpp-6ee6ebfb515c81077972.json",
+					"name" : "service_temp__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "service_temp_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-service_temp_uninstall-f9170d3fc82d43f475bc.json",
+					"name" : "service_temp_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-aacaa972fa4ced2cb849.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/workspace/ros2_ws/build/service_temp",
+		"source" : "/workspace/ros2_ws/src/service_temp"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

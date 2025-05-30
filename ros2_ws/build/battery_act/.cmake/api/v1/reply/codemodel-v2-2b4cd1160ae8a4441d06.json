@@ -1,0 +1,233 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-caaca5feea121c531120.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				},
+				{
+					"build" : "battery_act__py",
+					"jsonFile" : "directory-battery_act__py-1b478e62bca22631072a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/workspace/ros2_ws/build/battery_act/battery_act__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "battery_act",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_battery_act_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_battery_act_egg-6533c836a2992d4bfe3f.json",
+					"name" : "ament_cmake_python_build_battery_act_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_symlink_battery_act::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_symlink_battery_act-6af9c499c6d95331c542.json",
+					"name" : "ament_cmake_python_symlink_battery_act",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "battery_act::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-battery_act-c75ac60bbbda0f15ee9a.json",
+					"name" : "battery_act",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "battery_act__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-battery_act__cpp-368acfe4afe448704122.json",
+					"name" : "battery_act__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "battery_act__py::@50c656267a0619b1c526",
+					"jsonFile" : "target-battery_act__py-5677798043fb5beec951.json",
+					"name" : "battery_act__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "battery_act__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-battery_act__rosidl_generator_c-8a0bb590c39c67461cda.json",
+					"name" : "battery_act__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "battery_act__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-battery_act__rosidl_generator_py-0e4f7367b8d7035af6af.json",
+					"name" : "battery_act__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "battery_act__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-battery_act__rosidl_typesupport_c-fe5ac0e1e737217af524.json",
+					"name" : "battery_act__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "battery_act__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-battery_act__rosidl_typesupport_c__pyext-ed13e58d217838d0af37.json",
+					"name" : "battery_act__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "battery_act__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-battery_act__rosidl_typesupport_cpp-3b61e037ea7f541f1cc1.json",
+					"name" : "battery_act__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "battery_act__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-battery_act__rosidl_typesupport_fastrtps_c-6ec2c3dbc542a9ba9350.json",
+					"name" : "battery_act__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "battery_act__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-battery_act__rosidl_typesupport_fastrtps_c__pyext-e1de053dc6bbfe8b26a0.json",
+					"name" : "battery_act__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "battery_act__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-battery_act__rosidl_typesupport_fastrtps_cpp-57d526fd2fd3f26ac3ab.json",
+					"name" : "battery_act__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "battery_act__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-battery_act__rosidl_typesupport_introspection_c-fb817d2dda9b170e9963.json",
+					"name" : "battery_act__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "battery_act__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-battery_act__rosidl_typesupport_introspection_c__pyext-91bc9f0b6838f14e69e5.json",
+					"name" : "battery_act__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "battery_act__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-battery_act__rosidl_typesupport_introspection_cpp-4442ced5bf8ebd0728c7.json",
+					"name" : "battery_act__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "battery_act_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-battery_act_uninstall-d090800bf9057e8032b8.json",
+					"name" : "battery_act_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-8372fa93aeb2b2ce89ae.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/workspace/ros2_ws/build/battery_act",
+		"source" : "/workspace/ros2_ws/src/battery_act"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

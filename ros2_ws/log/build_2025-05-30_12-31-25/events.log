@@ -1,0 +1,615 @@
+[0.000000] (-) TimerEvent: {}
+[0.000139] (battery_act) JobQueued: {'identifier': 'battery_act', 'dependencies': OrderedDict()}
+[0.000266] (my_py_pkg) JobQueued: {'identifier': 'my_py_pkg', 'dependencies': OrderedDict()}
+[0.001161] (practicatar) JobQueued: {'identifier': 'practicatar', 'dependencies': OrderedDict()}
+[0.001281] (service_temp) JobQueued: {'identifier': 'service_temp', 'dependencies': OrderedDict()}
+[0.001339] (battery_act) JobStarted: {'identifier': 'battery_act'}
+[0.008907] (my_py_pkg) JobStarted: {'identifier': 'my_py_pkg'}
+[0.018519] (practicatar) JobStarted: {'identifier': 'practicatar'}
+[0.027079] (service_temp) JobStarted: {'identifier': 'service_temp'}
+[0.038187] (battery_act) JobProgress: {'identifier': 'battery_act', 'progress': 'cmake'}
+[0.038698] (battery_act) Command: {'cmd': ['/usr/bin/cmake', '/workspace/ros2_ws/src/battery_act', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/workspace/ros2_ws/install/battery_act'], 'cwd': '/workspace/ros2_ws/build/battery_act', 'env': OrderedDict([('HOSTNAME', 'aggg'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/workspace/ros2_ws/install/battery_act/lib:/workspace/ros2_ws/install/service_temp/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/aalexxgarciaa_-docker'), ('OLDPWD', '/workspace/ros2_ws/src/battery_act/scripts'), ('ROS_PYTHON_VERSION', '3'), ('LC_CTYPE', 'C.UTF-8'), ('COLCON_PREFIX_PATH', '/workspace/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':0'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/workspace/ros2_ws/install/battery_act:/workspace/ros2_ws/install/service_temp:/workspace/ros2_ws/install/practicatar:/workspace/ros2_ws/install/my_py_pkg:/opt/ros/humble'), ('DEBIAN_FRONTEND', 'noninteractive'), ('PWD', '/workspace/ros2_ws/build/battery_act'), ('PYTHONPATH', '/workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages:/workspace/ros2_ws/install/service_temp/local/lib/python3.10/dist-packages:/workspace/ros2_ws/build/service_temp:/workspace/ros2_ws/install/service_temp/lib/python3.10/site-packages:/workspace/ros2_ws/build/practicatar:/workspace/ros2_ws/install/practicatar/lib/python3.10/site-packages:/workspace/ros2_ws/build/my_py_pkg:/workspace/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('TZ', 'Europe/Madrid'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/workspace/ros2_ws/install/battery_act:/workspace/ros2_ws/install/service_temp:/workspace/ros2_ws/install/practicatar:/workspace/ros2_ws/install/my_py_pkg:/opt/ros/humble')]), 'shell': False}
+[0.099705] (-) TimerEvent: {}
+[0.199996] (-) TimerEvent: {}
+[0.300358] (-) TimerEvent: {}
+[0.400859] (-) TimerEvent: {}
+[0.501272] (-) TimerEvent: {}
+[0.601644] (-) TimerEvent: {}
+[0.702009] (-) TimerEvent: {}
+[0.717916] (service_temp) JobProgress: {'identifier': 'service_temp', 'progress': 'cmake'}
+[0.718982] (service_temp) Command: {'cmd': ['/usr/bin/cmake', '/workspace/ros2_ws/src/service_temp', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/workspace/ros2_ws/install/service_temp'], 'cwd': '/workspace/ros2_ws/build/service_temp', 'env': OrderedDict([('HOSTNAME', 'aggg'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/workspace/ros2_ws/install/battery_act/lib:/workspace/ros2_ws/install/service_temp/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/aalexxgarciaa_-docker'), ('OLDPWD', '/workspace/ros2_ws/src/battery_act/scripts'), ('ROS_PYTHON_VERSION', '3'), ('LC_CTYPE', 'C.UTF-8'), ('COLCON_PREFIX_PATH', '/workspace/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':0'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/workspace/ros2_ws/install/battery_act:/workspace/ros2_ws/install/service_temp:/workspace/ros2_ws/install/practicatar:/workspace/ros2_ws/install/my_py_pkg:/opt/ros/humble'), ('DEBIAN_FRONTEND', 'noninteractive'), ('PWD', '/workspace/ros2_ws/build/service_temp'), ('PYTHONPATH', '/workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages:/workspace/ros2_ws/install/service_temp/local/lib/python3.10/dist-packages:/workspace/ros2_ws/build/service_temp:/workspace/ros2_ws/install/service_temp/lib/python3.10/site-packages:/workspace/ros2_ws/build/practicatar:/workspace/ros2_ws/install/practicatar/lib/python3.10/site-packages:/workspace/ros2_ws/build/my_py_pkg:/workspace/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('TZ', 'Europe/Madrid'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/workspace/ros2_ws/install/battery_act:/workspace/ros2_ws/install/service_temp:/workspace/ros2_ws/install/practicatar:/workspace/ros2_ws/install/my_py_pkg:/opt/ros/humble')]), 'shell': False}
+[0.721949] (battery_act) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.722274] (battery_act) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.722458] (battery_act) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.722626] (battery_act) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.722777] (battery_act) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.722908] (battery_act) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.723037] (battery_act) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.723204] (battery_act) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.723341] (battery_act) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.724165] (battery_act) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.724378] (battery_act) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.725211] (battery_act) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.725480] (battery_act) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.725619] (battery_act) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.749977] (battery_act) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.798281] (battery_act) StdoutLine: {'line': b'-- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.802111] (-) TimerEvent: {}
+[0.830474] (service_temp) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.886680] (battery_act) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.897357] (battery_act) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.902228] (-) TimerEvent: {}
+[0.917307] (battery_act) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.944848] (battery_act) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.945550] (service_temp) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.959337] (service_temp) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.984012] (battery_act) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.002336] (-) TimerEvent: {}
+[1.077673] (service_temp) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.092696] (battery_act) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.097615] (battery_act) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.099198] (service_temp) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.100031] (service_temp) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.101127] (service_temp) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.102430] (-) TimerEvent: {}
+[1.108721] (service_temp) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.202547] (-) TimerEvent: {}
+[1.263393] (service_temp) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.268957] (battery_act) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[1.287045] (service_temp) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.288456] (service_temp) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.290059] (service_temp) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.296409] (service_temp) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.302651] (-) TimerEvent: {}
+[1.321933] (battery_act) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[1.372297] (practicatar) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/workspace/ros2_ws/build/practicatar/build', '--no-deps', 'symlink_data'], 'cwd': '/workspace/ros2_ws/build/practicatar', 'env': {'HOSTNAME': 'aggg', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/workspace/ros2_ws/install/battery_act/lib:/workspace/ros2_ws/install/service_temp/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/aalexxgarciaa_-docker', 'OLDPWD': '/workspace/ros2_ws/src/battery_act/scripts', 'ROS_PYTHON_VERSION': '3', 'LC_CTYPE': 'C.UTF-8', 'COLCON_PREFIX_PATH': '/workspace/ros2_ws/install', 'ROS_DISTRO': 'humble', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/workspace/ros2_ws/install/battery_act:/workspace/ros2_ws/install/service_temp:/workspace/ros2_ws/install/practicatar:/workspace/ros2_ws/install/my_py_pkg:/opt/ros/humble', 'DEBIAN_FRONTEND': 'noninteractive', 'PWD': '/workspace/ros2_ws/build/practicatar', 'PYTHONPATH': '/workspace/ros2_ws/build/practicatar/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ros2_ws/install/practicatar/lib/python3.10/site-packages:/workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages:/workspace/ros2_ws/install/service_temp/local/lib/python3.10/dist-packages:/workspace/ros2_ws/build/service_temp:/workspace/ros2_ws/install/service_temp/lib/python3.10/site-packages:/workspace/ros2_ws/build/practicatar:/workspace/ros2_ws/install/practicatar/lib/python3.10/site-packages:/workspace/ros2_ws/build/my_py_pkg:/workspace/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'TZ': 'Europe/Madrid', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/workspace/ros2_ws/install/battery_act:/workspace/ros2_ws/install/service_temp'}, 'shell': False}
+[1.391474] (my_py_pkg) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/workspace/ros2_ws/build/my_py_pkg/build', '--no-deps'], 'cwd': '/workspace/ros2_ws/build/my_py_pkg', 'env': {'HOSTNAME': 'aggg', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/workspace/ros2_ws/install/battery_act/lib:/workspace/ros2_ws/install/service_temp/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/aalexxgarciaa_-docker', 'OLDPWD': '/workspace/ros2_ws/src/battery_act/scripts', 'ROS_PYTHON_VERSION': '3', 'LC_CTYPE': 'C.UTF-8', 'COLCON_PREFIX_PATH': '/workspace/ros2_ws/install', 'ROS_DISTRO': 'humble', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/workspace/ros2_ws/install/battery_act:/workspace/ros2_ws/install/service_temp:/workspace/ros2_ws/install/practicatar:/workspace/ros2_ws/install/my_py_pkg:/opt/ros/humble', 'DEBIAN_FRONTEND': 'noninteractive', 'PWD': '/workspace/ros2_ws/build/my_py_pkg', 'PYTHONPATH': '/workspace/ros2_ws/build/my_py_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages:/workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages:/workspace/ros2_ws/install/service_temp/local/lib/python3.10/dist-packages:/workspace/ros2_ws/build/service_temp:/workspace/ros2_ws/install/service_temp/lib/python3.10/site-packages:/workspace/ros2_ws/build/practicatar:/workspace/ros2_ws/install/practicatar/lib/python3.10/site-packages:/workspace/ros2_ws/build/my_py_pkg:/workspace/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'TZ': 'Europe/Madrid', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/workspace/ros2_ws/install/battery_act:/workspace/ros2_ws/install/service_temp'}, 'shell': False}
+[1.402747] (-) TimerEvent: {}
+[1.406826] (battery_act) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.423629] (battery_act) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.502855] (-) TimerEvent: {}
+[1.557003] (battery_act) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.557845] (battery_act) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.602961] (-) TimerEvent: {}
+[1.644245] (service_temp) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[1.688903] (battery_act) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.690880] (battery_act) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.703062] (-) TimerEvent: {}
+[1.785798] (service_temp) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[1.803163] (-) TimerEvent: {}
+[1.815417] (battery_act) StdoutLine: {'line': b'-- Found rclpy: 3.3.16 (/opt/ros/humble/share/rclpy/cmake)\n'}
+[1.818282] (battery_act) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[1.837482] (service_temp) StdoutLine: {'line': b'-- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[1.881998] (practicatar) StdoutLine: {'line': b'running develop\n'}
+[1.903255] (-) TimerEvent: {}
+[1.920200] (my_py_pkg) StdoutLine: {'line': b'running develop\n'}
+[1.924490] (service_temp) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[1.935165] (service_temp) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.953297] (service_temp) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[1.981115] (service_temp) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.003356] (-) TimerEvent: {}
+[2.018473] (service_temp) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.103459] (-) TimerEvent: {}
+[2.112616] (service_temp) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[2.119756] (service_temp) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[2.166198] (practicatar) StdoutLine: {'line': b'running egg_info\n'}
+[2.166522] (practicatar) StdoutLine: {'line': b'creating practicatar.egg-info\n'}
+[2.166738] (practicatar) StdoutLine: {'line': b'writing practicatar.egg-info/PKG-INFO\n'}
+[2.166971] (practicatar) StdoutLine: {'line': b'writing dependency_links to practicatar.egg-info/dependency_links.txt\n'}
+[2.167187] (practicatar) StdoutLine: {'line': b'writing entry points to practicatar.egg-info/entry_points.txt\n'}
+[2.167402] (practicatar) StdoutLine: {'line': b'writing requirements to practicatar.egg-info/requires.txt\n'}
+[2.167539] (practicatar) StdoutLine: {'line': b'writing top-level names to practicatar.egg-info/top_level.txt\n'}
+[2.167713] (practicatar) StdoutLine: {'line': b"writing manifest file 'practicatar.egg-info/SOURCES.txt'\n"}
+[2.170388] (practicatar) StdoutLine: {'line': b"reading manifest file 'practicatar.egg-info/SOURCES.txt'\n"}
+[2.171568] (practicatar) StdoutLine: {'line': b"writing manifest file 'practicatar.egg-info/SOURCES.txt'\n"}
+[2.174122] (practicatar) StdoutLine: {'line': b'running build_ext\n'}
+[2.174488] (practicatar) StdoutLine: {'line': b'Creating /workspace/ros2_ws/install/practicatar/lib/python3.10/site-packages/practicatar.egg-link (link to .)\n'}
+[2.175968] (practicatar) StdoutLine: {'line': b'\n'}
+[2.176221] (practicatar) StdoutLine: {'line': b'Installed /workspace/ros2_ws/build/practicatar\n'}
+[2.176505] (practicatar) StdoutLine: {'line': b'running symlink_data\n'}
+[2.176708] (practicatar) StdoutLine: {'line': b'creating /workspace/ros2_ws/install/practicatar/share/ament_index\n'}
+[2.176884] (practicatar) StdoutLine: {'line': b'creating /workspace/ros2_ws/install/practicatar/share/ament_index/resource_index\n'}
+[2.177131] (practicatar) StdoutLine: {'line': b'creating /workspace/ros2_ws/install/practicatar/share/ament_index/resource_index/packages\n'}
+[2.177313] (practicatar) StdoutLine: {'line': b'symbolically linking /workspace/ros2_ws/build/practicatar/resource/practicatar -> /workspace/ros2_ws/install/practicatar/share/ament_index/resource_index/packages\n'}
+[2.177475] (practicatar) StdoutLine: {'line': b'symbolically linking /workspace/ros2_ws/build/practicatar/package.xml -> /workspace/ros2_ws/install/practicatar/share/practicatar\n'}
+[2.203571] (-) TimerEvent: {}
+[2.207621] (my_py_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[2.207896] (my_py_pkg) StdoutLine: {'line': b'creating my_py_pkg.egg-info\n'}
+[2.208117] (my_py_pkg) StdoutLine: {'line': b'writing my_py_pkg.egg-info/PKG-INFO\n'}
+[2.208393] (my_py_pkg) StdoutLine: {'line': b'writing dependency_links to my_py_pkg.egg-info/dependency_links.txt\n'}
+[2.208636] (my_py_pkg) StdoutLine: {'line': b'writing entry points to my_py_pkg.egg-info/entry_points.txt\n'}
+[2.208885] (my_py_pkg) StdoutLine: {'line': b'writing requirements to my_py_pkg.egg-info/requires.txt\n'}
+[2.209050] (my_py_pkg) StdoutLine: {'line': b'writing top-level names to my_py_pkg.egg-info/top_level.txt\n'}
+[2.209521] (my_py_pkg) StdoutLine: {'line': b"writing manifest file 'my_py_pkg.egg-info/SOURCES.txt'\n"}
+[2.212484] (my_py_pkg) StdoutLine: {'line': b"reading manifest file 'my_py_pkg.egg-info/SOURCES.txt'\n"}
+[2.213685] (my_py_pkg) StdoutLine: {'line': b"writing manifest file 'my_py_pkg.egg-info/SOURCES.txt'\n"}
+[2.216493] (my_py_pkg) StdoutLine: {'line': b'running build_ext\n'}
+[2.216899] (my_py_pkg) StdoutLine: {'line': b'Creating /workspace/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages/my-py-pkg.egg-link (link to .)\n'}
+[2.218511] (my_py_pkg) StdoutLine: {'line': b'Installing talker script to /workspace/ros2_ws/install/my_py_pkg/lib/my_py_pkg\n'}
+[2.218971] (my_py_pkg) StdoutLine: {'line': b'\n'}
+[2.219192] (my_py_pkg) StdoutLine: {'line': b'Installed /workspace/ros2_ws/build/my_py_pkg\n'}
+[2.238156] (practicatar) CommandEnded: {'returncode': 0}
+[2.257759] (practicatar) JobEnded: {'identifier': 'practicatar', 'rc': 0}
+[2.280463] (my_py_pkg) CommandEnded: {'returncode': 0}
+[2.292109] (my_py_pkg) JobEnded: {'identifier': 'my_py_pkg', 'rc': 0}
+[2.301789] (service_temp) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[2.304654] (-) TimerEvent: {}
+[2.339697] (service_temp) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[2.404754] (-) TimerEvent: {}
+[2.409043] (service_temp) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[2.419377] (service_temp) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[2.433084] (battery_act) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[2.504865] (-) TimerEvent: {}
+[2.506431] (service_temp) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[2.507052] (service_temp) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[2.594148] (service_temp) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[2.596115] (service_temp) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[2.604992] (-) TimerEvent: {}
+[2.669170] (service_temp) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[2.705104] (-) TimerEvent: {}
+[2.805686] (-) TimerEvent: {}
+[2.860978] (battery_act) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.905784] (-) TimerEvent: {}
+[3.006446] (-) TimerEvent: {}
+[3.031221] (service_temp) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[3.037894] (battery_act) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.067934] (battery_act) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[3.069890] (battery_act) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[3.103662] (battery_act) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[3.103989] (battery_act) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[3.104161] (battery_act) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[3.104317] (battery_act) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[3.106547] (-) TimerEvent: {}
+[3.137868] (battery_act) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[3.204754] (battery_act) StdoutLine: {'line': b'-- Configuring done\n'}
+[3.206645] (-) TimerEvent: {}
+[3.251149] (battery_act) StdoutLine: {'line': b'-- Generating done\n'}
+[3.265978] (battery_act) StdoutLine: {'line': b'-- Build files have been written to: /workspace/ros2_ws/build/battery_act\n'}
+[3.282542] (battery_act) CommandEnded: {'returncode': 0}
+[3.283182] (battery_act) JobProgress: {'identifier': 'battery_act', 'progress': 'build'}
+[3.285008] (battery_act) Command: {'cmd': ['/usr/bin/cmake', '--build', '/workspace/ros2_ws/build/battery_act', '--', '-j4', '-l4'], 'cwd': '/workspace/ros2_ws/build/battery_act', 'env': OrderedDict([('HOSTNAME', 'aggg'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/workspace/ros2_ws/install/battery_act/lib:/workspace/ros2_ws/install/service_temp/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/aalexxgarciaa_-docker'), ('OLDPWD', '/workspace/ros2_ws/src/battery_act/scripts'), ('ROS_PYTHON_VERSION', '3'), ('LC_CTYPE', 'C.UTF-8'), ('COLCON_PREFIX_PATH', '/workspace/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':0'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/workspace/ros2_ws/install/battery_act:/workspace/ros2_ws/install/service_temp:/workspace/ros2_ws/install/practicatar:/workspace/ros2_ws/install/my_py_pkg:/opt/ros/humble'), ('DEBIAN_FRONTEND', 'noninteractive'), ('PWD', '/workspace/ros2_ws/build/battery_act'), ('PYTHONPATH', '/workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages:/workspace/ros2_ws/install/service_temp/local/lib/python3.10/dist-packages:/workspace/ros2_ws/build/service_temp:/workspace/ros2_ws/install/service_temp/lib/python3.10/site-packages:/workspace/ros2_ws/build/practicatar:/workspace/ros2_ws/install/practicatar/lib/python3.10/site-packages:/workspace/ros2_ws/build/my_py_pkg:/workspace/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('TZ', 'Europe/Madrid'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/workspace/ros2_ws/install/battery_act:/workspace/ros2_ws/install/service_temp:/workspace/ros2_ws/install/practicatar:/workspace/ros2_ws/install/my_py_pkg:/opt/ros/humble')]), 'shell': False}
+[3.306747] (-) TimerEvent: {}
+[3.337167] (battery_act) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[3.352054] (battery_act) StdoutLine: {'line': b'[  6%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[3.365863] (battery_act) StdoutLine: {'line': b'[  6%] Built target ament_cmake_python_symlink_battery_act\n'}
+[3.406856] (-) TimerEvent: {}
+[3.501677] (service_temp) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.506961] (-) TimerEvent: {}
+[3.607302] (-) TimerEvent: {}
+[3.707610] (-) TimerEvent: {}
+[3.731840] (service_temp) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.779479] (service_temp) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[3.779781] (service_temp) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[3.807708] (-) TimerEvent: {}
+[3.821574] (battery_act) StdoutLine: {'line': b'running egg_info\n'}
+[3.822595] (battery_act) StdoutLine: {'line': b'creating battery_act.egg-info\n'}
+[3.822884] (battery_act) StdoutLine: {'line': b'writing battery_act.egg-info/PKG-INFO\n'}
+[3.823234] (battery_act) StdoutLine: {'line': b'writing dependency_links to battery_act.egg-info/dependency_links.txt\n'}
+[3.823491] (battery_act) StdoutLine: {'line': b'writing top-level names to battery_act.egg-info/top_level.txt\n'}
+[3.823769] (battery_act) StdoutLine: {'line': b"writing manifest file 'battery_act.egg-info/SOURCES.txt'\n"}
+[3.827350] (battery_act) StdoutLine: {'line': b"reading manifest file 'battery_act.egg-info/SOURCES.txt'\n"}
+[3.828400] (battery_act) StdoutLine: {'line': b"writing manifest file 'battery_act.egg-info/SOURCES.txt'\n"}
+[3.829120] (service_temp) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[3.829714] (service_temp) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[3.830012] (service_temp) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[3.830247] (service_temp) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[3.874551] (service_temp) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[3.877249] (battery_act) StdoutLine: {'line': b'[  6%] Built target ament_cmake_python_build_battery_act_egg\n'}
+[3.907804] (-) TimerEvent: {}
+[3.959320] (service_temp) StdoutLine: {'line': b'-- Configuring done\n'}
+[4.007916] (-) TimerEvent: {}
+[4.013763] (service_temp) StdoutLine: {'line': b'-- Generating done\n'}
+[4.032769] (service_temp) StdoutLine: {'line': b'-- Build files have been written to: /workspace/ros2_ws/build/service_temp\n'}
+[4.050287] (service_temp) CommandEnded: {'returncode': 0}
+[4.051022] (service_temp) JobProgress: {'identifier': 'service_temp', 'progress': 'build'}
+[4.051708] (service_temp) Command: {'cmd': ['/usr/bin/cmake', '--build', '/workspace/ros2_ws/build/service_temp', '--', '-j4', '-l4'], 'cwd': '/workspace/ros2_ws/build/service_temp', 'env': OrderedDict([('HOSTNAME', 'aggg'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/workspace/ros2_ws/install/battery_act/lib:/workspace/ros2_ws/install/service_temp/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/aalexxgarciaa_-docker'), ('OLDPWD', '/workspace/ros2_ws/src/battery_act/scripts'), ('ROS_PYTHON_VERSION', '3'), ('LC_CTYPE', 'C.UTF-8'), ('COLCON_PREFIX_PATH', '/workspace/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':0'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/workspace/ros2_ws/install/battery_act:/workspace/ros2_ws/install/service_temp:/workspace/ros2_ws/install/practicatar:/workspace/ros2_ws/install/my_py_pkg:/opt/ros/humble'), ('DEBIAN_FRONTEND', 'noninteractive'), ('PWD', '/workspace/ros2_ws/build/service_temp'), ('PYTHONPATH', '/workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages:/workspace/ros2_ws/install/service_temp/local/lib/python3.10/dist-packages:/workspace/ros2_ws/build/service_temp:/workspace/ros2_ws/install/service_temp/lib/python3.10/site-packages:/workspace/ros2_ws/build/practicatar:/workspace/ros2_ws/install/practicatar/lib/python3.10/site-packages:/workspace/ros2_ws/build/my_py_pkg:/workspace/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('TZ', 'Europe/Madrid'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/workspace/ros2_ws/install/battery_act:/workspace/ros2_ws/install/service_temp:/workspace/ros2_ws/install/practicatar:/workspace/ros2_ws/install/my_py_pkg:/opt/ros/humble')]), 'shell': False}
+[4.108011] (-) TimerEvent: {}
+[4.118168] (service_temp) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[4.134543] (service_temp) StdoutLine: {'line': b'[  6%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[4.208132] (-) TimerEvent: {}
+[4.231232] (service_temp) StdoutLine: {'line': b'[  6%] Built target ament_cmake_python_symlink_service_temp\n'}
+[4.304826] (battery_act) StdoutLine: {'line': b'[  6%] Built target battery_act__cpp\n'}
+[4.308233] (-) TimerEvent: {}
+[4.357193] (battery_act) StdoutLine: {'line': b'[  9%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[4.368686] (battery_act) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[4.369117] (battery_act) StdoutLine: {'line': b'[ 16%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[4.408329] (-) TimerEvent: {}
+[4.509174] (-) TimerEvent: {}
+[4.547804] (battery_act) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding C object CMakeFiles/battery_act__rosidl_generator_c.dir/rosidl_generator_c/battery_act/action/detail/battery__functions.c.o\x1b[0m\n'}
+[4.609282] (-) TimerEvent: {}
+[4.710240] (-) TimerEvent: {}
+[4.811177] (-) TimerEvent: {}
+[4.912348] (-) TimerEvent: {}
+[4.993703] (service_temp) StdoutLine: {'line': b'running egg_info\n'}
+[4.995012] (service_temp) StdoutLine: {'line': b'creating service_temp.egg-info\n'}
+[4.995615] (service_temp) StdoutLine: {'line': b'writing service_temp.egg-info/PKG-INFO\n'}
+[4.996110] (service_temp) StdoutLine: {'line': b'writing dependency_links to service_temp.egg-info/dependency_links.txt\n'}
+[4.996604] (service_temp) StdoutLine: {'line': b'writing top-level names to service_temp.egg-info/top_level.txt\n'}
+[4.997151] (service_temp) StdoutLine: {'line': b"writing manifest file 'service_temp.egg-info/SOURCES.txt'\n"}
+[5.004257] (service_temp) StdoutLine: {'line': b"reading manifest file 'service_temp.egg-info/SOURCES.txt'\n"}
+[5.005640] (service_temp) StdoutLine: {'line': b"writing manifest file 'service_temp.egg-info/SOURCES.txt'\n"}
+[5.012463] (-) TimerEvent: {}
+[5.072400] (service_temp) StdoutLine: {'line': b'[  6%] Built target ament_cmake_python_build_service_temp_egg\n'}
+[5.078566] (battery_act) StdoutLine: {'line': b'[ 22%] \x1b[32m\x1b[1mLinking C shared library libbattery_act__rosidl_generator_c.so\x1b[0m\n'}
+[5.112587] (-) TimerEvent: {}
+[5.167826] (battery_act) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/battery_act__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/battery_act/action/battery__type_support.cpp.o\x1b[0m\n'}
+[5.212678] (-) TimerEvent: {}
+[5.231471] (battery_act) StdoutLine: {'line': b'[ 25%] Built target battery_act__rosidl_generator_c\n'}
+[5.247363] (service_temp) StdoutLine: {'line': b'[  6%] Built target service_temp__cpp\n'}
+[5.265311] (service_temp) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/service_temp__rosidl_generator_c.dir/rosidl_generator_c/service_temp/srv/detail/convert_temp__functions.c.o\x1b[0m\n'}
+[5.265815] (service_temp) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[5.271071] (battery_act) StdoutLine: {'line': b'[ 29%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[5.280655] (service_temp) StdoutLine: {'line': b'[ 16%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[5.296256] (service_temp) StdoutLine: {'line': b'[ 19%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[5.312781] (-) TimerEvent: {}
+[5.413777] (-) TimerEvent: {}
+[5.514711] (-) TimerEvent: {}
+[5.524363] (service_temp) StdoutLine: {'line': b'[ 22%] \x1b[32m\x1b[1mLinking C shared library libservice_temp__rosidl_generator_c.so\x1b[0m\n'}
+[5.614839] (-) TimerEvent: {}
+[5.646300] (service_temp) StdoutLine: {'line': b'[ 22%] Built target service_temp__rosidl_generator_c\n'}
+[5.665585] (service_temp) StdoutLine: {'line': b'[ 25%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[5.714123] (battery_act) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/battery_act__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/battery_act/action/detail/battery__type_support.cpp.o\x1b[0m\n'}
+[5.714930] (-) TimerEvent: {}
+[5.815894] (-) TimerEvent: {}
+[5.916804] (-) TimerEvent: {}
+[6.017127] (-) TimerEvent: {}
+[6.117443] (-) TimerEvent: {}
+[6.217798] (-) TimerEvent: {}
+[6.318144] (-) TimerEvent: {}
+[6.418498] (-) TimerEvent: {}
+[6.435350] (battery_act) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/battery_act__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/battery_act/action/detail/dds_fastrtps/battery__type_support.cpp.o\x1b[0m\n'}
+[6.446511] (service_temp) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/service_temp__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/service_temp/srv/convert_temp__type_support.cpp.o\x1b[0m\n'}
+[6.518616] (-) TimerEvent: {}
+[6.618966] (-) TimerEvent: {}
+[6.660113] (service_temp) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/service_temp__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/service_temp/srv/detail/dds_fastrtps/convert_temp__type_support.cpp.o\x1b[0m\n'}
+[6.660514] (battery_act) StdoutLine: {'line': b'[ 38%] \x1b[32m\x1b[1mLinking CXX shared library libbattery_act__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[6.674948] (service_temp) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/service_temp__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/service_temp/srv/detail/convert_temp__type_support.cpp.o\x1b[0m\n'}
+[6.719075] (-) TimerEvent: {}
+[6.820065] (-) TimerEvent: {}
+[6.856083] (service_temp) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/service_temp__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/service_temp/srv/detail/convert_temp__type_support_c.cpp.o\x1b[0m\n'}
+[6.870837] (battery_act) StdoutLine: {'line': b'[ 38%] Built target battery_act__rosidl_typesupport_cpp\n'}
+[6.920179] (-) TimerEvent: {}
+[6.958294] (battery_act) StdoutLine: {'line': b'[ 41%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[6.999319] (battery_act) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/battery_act__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/battery_act/action/detail/battery__type_support_c.cpp.o\x1b[0m\n'}
+[7.020281] (-) TimerEvent: {}
+[7.120657] (-) TimerEvent: {}
+[7.221011] (-) TimerEvent: {}
+[7.321368] (-) TimerEvent: {}
+[7.415238] (service_temp) StdoutLine: {'line': b'[ 41%] \x1b[32m\x1b[1mLinking CXX shared library libservice_temp__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[7.421484] (-) TimerEvent: {}
+[7.521877] (-) TimerEvent: {}
+[7.595272] (service_temp) StdoutLine: {'line': b'[ 41%] Built target service_temp__rosidl_typesupport_cpp\n'}
+[7.621990] (-) TimerEvent: {}
+[7.661860] (service_temp) StdoutLine: {'line': b'[ 45%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[7.722115] (-) TimerEvent: {}
+[7.823055] (-) TimerEvent: {}
+[7.830182] (battery_act) StdoutLine: {'line': b'[ 48%] \x1b[32m\x1b[1mLinking CXX shared library libbattery_act__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[7.923172] (-) TimerEvent: {}
+[8.024085] (-) TimerEvent: {}
+[8.127232] (-) TimerEvent: {}
+[8.228823] (-) TimerEvent: {}
+[8.329216] (-) TimerEvent: {}
+[8.382837] (battery_act) StdoutLine: {'line': b'[ 48%] Built target battery_act__rosidl_typesupport_introspection_cpp\n'}
+[8.432554] (-) TimerEvent: {}
+[8.460756] (service_temp) StdoutLine: {'line': b'[ 48%] \x1b[32m\x1b[1mLinking CXX shared library libservice_temp__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[8.469285] (battery_act) StdoutLine: {'line': b'[ 51%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[8.534157] (-) TimerEvent: {}
+[8.635529] (-) TimerEvent: {}
+[8.638433] (service_temp) StdoutLine: {'line': b'[ 51%] \x1b[32m\x1b[1mLinking CXX shared library libservice_temp__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[8.735043] (service_temp) StdoutLine: {'line': b'[ 54%] \x1b[32m\x1b[1mLinking CXX shared library libservice_temp__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[8.735580] (-) TimerEvent: {}
+[8.766801] (battery_act) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding C object CMakeFiles/battery_act__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/battery_act/action/detail/battery__type_support.c.o\x1b[0m\n'}
+[8.778782] (service_temp) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding C object CMakeFiles/service_temp__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/service_temp/srv/detail/convert_temp__type_support.c.o\x1b[0m\n'}
+[8.835682] (-) TimerEvent: {}
+[8.884390] (battery_act) StdoutLine: {'line': b'[ 58%] \x1b[32m\x1b[1mLinking CXX shared library libbattery_act__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[8.904817] (service_temp) StdoutLine: {'line': b'[ 58%] Built target service_temp__rosidl_typesupport_fastrtps_cpp\n'}
+[8.926578] (service_temp) StdoutLine: {'line': b'[ 61%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[8.935824] (-) TimerEvent: {}
+[8.971441] (service_temp) StdoutLine: {'line': b'[ 64%] \x1b[32m\x1b[1mLinking C shared library libservice_temp__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[9.035929] (-) TimerEvent: {}
+[9.092034] (service_temp) StdoutLine: {'line': b'[ 64%] Built target service_temp__rosidl_typesupport_introspection_cpp\n'}
+[9.136063] (-) TimerEvent: {}
+[9.138218] (battery_act) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking C shared library libbattery_act__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[9.139001] (service_temp) StdoutLine: {'line': b'[ 64%] Built target service_temp__rosidl_typesupport_introspection_c\n'}
+[9.163201] (service_temp) StdoutLine: {'line': b'[ 64%] Built target service_temp__rosidl_typesupport_fastrtps_c\n'}
+[9.205397] (battery_act) StdoutLine: {'line': b'[ 64%] \x1b[32m\x1b[1mLinking CXX shared library libbattery_act__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[9.230981] (battery_act) StdoutLine: {'line': b'[ 64%] Built target battery_act__rosidl_typesupport_fastrtps_c\n'}
+[9.236172] (-) TimerEvent: {}
+[9.244407] (battery_act) StdoutLine: {'line': b'[ 64%] Built target battery_act__rosidl_typesupport_introspection_c\n'}
+[9.336275] (-) TimerEvent: {}
+[9.362145] (battery_act) StdoutLine: {'line': b'[ 64%] Built target battery_act__rosidl_typesupport_fastrtps_cpp\n'}
+[9.387616] (battery_act) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/battery_act__rosidl_typesupport_c.dir/rosidl_typesupport_c/battery_act/action/battery__type_support.cpp.o\x1b[0m\n'}
+[9.436377] (-) TimerEvent: {}
+[9.446002] (battery_act) StdoutLine: {'line': b'[ 70%] \x1b[32m\x1b[1mLinking CXX shared library libbattery_act__rosidl_typesupport_c.so\x1b[0m\n'}
+[9.479845] (service_temp) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/service_temp__rosidl_typesupport_c.dir/rosidl_typesupport_c/service_temp/srv/convert_temp__type_support.cpp.o\x1b[0m\n'}
+[9.495789] (battery_act) StdoutLine: {'line': b'[ 70%] Built target battery_act__rosidl_typesupport_c\n'}
+[9.522873] (battery_act) StdoutLine: {'line': b'[ 70%] Built target battery_act\n'}
+[9.523082] (service_temp) StdoutLine: {'line': b'[ 70%] \x1b[32m\x1b[1mLinking CXX shared library libservice_temp__rosidl_typesupport_c.so\x1b[0m\n'}
+[9.536489] (-) TimerEvent: {}
+[9.545344] (battery_act) StdoutLine: {'line': b'[ 74%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[9.573271] (service_temp) StdoutLine: {'line': b'[ 70%] Built target service_temp__rosidl_typesupport_c\n'}
+[9.596737] (service_temp) StdoutLine: {'line': b'[ 70%] Built target service_temp\n'}
+[9.622038] (service_temp) StdoutLine: {'line': b'[ 74%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[9.636594] (-) TimerEvent: {}
+[9.736918] (-) TimerEvent: {}
+[9.837367] (-) TimerEvent: {}
+[9.937846] (-) TimerEvent: {}
+[10.040796] (-) TimerEvent: {}
+[10.141152] (-) TimerEvent: {}
+[10.177888] (service_temp) StdoutLine: {'line': b'[ 74%] Built target service_temp__py\n'}
+[10.214543] (service_temp) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding C object CMakeFiles/service_temp__rosidl_generator_py.dir/rosidl_generator_py/service_temp/srv/_convert_temp_s.c.o\x1b[0m\n'}
+[10.241285] (-) TimerEvent: {}
+[10.341642] (-) TimerEvent: {}
+[10.410424] (service_temp) StdoutLine: {'line': b'[ 80%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/service_temp/libservice_temp__rosidl_generator_py.so\x1b[0m\n'}
+[10.441805] (-) TimerEvent: {}
+[10.460925] (service_temp) StdoutLine: {'line': b'[ 80%] Built target service_temp__rosidl_generator_py\n'}
+[10.494101] (service_temp) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding C object CMakeFiles/service_temp__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/service_temp/_service_temp_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[10.494882] (service_temp) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/service_temp__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/service_temp/_service_temp_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[10.498446] (service_temp) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/service_temp__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/service_temp/_service_temp_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[10.541902] (-) TimerEvent: {}
+[10.642363] (-) TimerEvent: {}
+[10.685868] (service_temp) StdoutLine: {'line': b'[ 93%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/service_temp/service_temp_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[10.696400] (service_temp) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/service_temp/service_temp_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[10.703794] (service_temp) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/service_temp/service_temp_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[10.742472] (-) TimerEvent: {}
+[10.744832] (service_temp) StdoutLine: {'line': b'[100%] Built target service_temp__rosidl_typesupport_introspection_c__pyext\n'}
+[10.766672] (service_temp) StdoutLine: {'line': b'[100%] Built target service_temp__rosidl_typesupport_fastrtps_c__pyext\n'}
+[10.767735] (service_temp) StdoutLine: {'line': b'[100%] Built target service_temp__rosidl_typesupport_c__pyext\n'}
+[10.786830] (service_temp) CommandEnded: {'returncode': 0}
+[10.787574] (service_temp) JobProgress: {'identifier': 'service_temp', 'progress': 'install'}
+[10.801182] (service_temp) Command: {'cmd': ['/usr/bin/cmake', '--install', '/workspace/ros2_ws/build/service_temp'], 'cwd': '/workspace/ros2_ws/build/service_temp', 'env': OrderedDict([('HOSTNAME', 'aggg'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/workspace/ros2_ws/install/battery_act/lib:/workspace/ros2_ws/install/service_temp/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/aalexxgarciaa_-docker'), ('OLDPWD', '/workspace/ros2_ws/src/battery_act/scripts'), ('ROS_PYTHON_VERSION', '3'), ('LC_CTYPE', 'C.UTF-8'), ('COLCON_PREFIX_PATH', '/workspace/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':0'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/workspace/ros2_ws/install/battery_act:/workspace/ros2_ws/install/service_temp:/workspace/ros2_ws/install/practicatar:/workspace/ros2_ws/install/my_py_pkg:/opt/ros/humble'), ('DEBIAN_FRONTEND', 'noninteractive'), ('PWD', '/workspace/ros2_ws/build/service_temp'), ('PYTHONPATH', '/workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages:/workspace/ros2_ws/install/service_temp/local/lib/python3.10/dist-packages:/workspace/ros2_ws/build/service_temp:/workspace/ros2_ws/install/service_temp/lib/python3.10/site-packages:/workspace/ros2_ws/build/practicatar:/workspace/ros2_ws/install/practicatar/lib/python3.10/site-packages:/workspace/ros2_ws/build/my_py_pkg:/workspace/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('TZ', 'Europe/Madrid'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/workspace/ros2_ws/install/battery_act:/workspace/ros2_ws/install/service_temp:/workspace/ros2_ws/install/practicatar:/workspace/ros2_ws/install/my_py_pkg:/opt/ros/humble')]), 'shell': False}
+[10.815267] (service_temp) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[10.816725] (service_temp) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[10.817131] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/share/ament_index/resource_index/rosidl_interfaces/service_temp\n'}
+[10.833227] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/include/service_temp/service_temp/msg/rosidl_generator_c__visibility_control.h\n'}
+[10.849730] (-) TimerEvent: {}
+[10.851228] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/include/service_temp/service_temp/srv/convert_temp.h\n'}
+[10.873117] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/include/service_temp/service_temp/srv/detail/convert_temp__functions.h\n'}
+[10.880239] (battery_act) StdoutLine: {'line': b'[ 74%] Built target battery_act__py\n'}
+[10.887887] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/include/service_temp/service_temp/srv/detail/convert_temp__struct.h\n'}
+[10.901443] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/include/service_temp/service_temp/srv/detail/convert_temp__type_support.h\n'}
+[10.909123] (battery_act) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding C object CMakeFiles/battery_act__rosidl_generator_py.dir/rosidl_generator_py/battery_act/action/_battery_s.c.o\x1b[0m\n'}
+[10.914335] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/share/service_temp/environment/library_path.sh\n'}
+[10.930298] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/share/service_temp/environment/library_path.dsv\n'}
+[10.941144] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/include/service_temp/service_temp/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[10.949834] (-) TimerEvent: {}
+[10.957426] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/include/service_temp/service_temp/srv/detail/convert_temp__rosidl_typesupport_fastrtps_c.h\n'}
+[10.973113] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/include/service_temp/service_temp/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[10.986928] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/include/service_temp/service_temp/srv/convert_temp.hpp\n'}
+[11.001074] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/include/service_temp/service_temp/srv/detail/convert_temp__builder.hpp\n'}
+[11.013716] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/include/service_temp/service_temp/srv/detail/convert_temp__struct.hpp\n'}
+[11.024524] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/include/service_temp/service_temp/srv/detail/convert_temp__traits.hpp\n'}
+[11.037179] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/include/service_temp/service_temp/srv/detail/convert_temp__type_support.hpp\n'}
+[11.049941] (-) TimerEvent: {}
+[11.051393] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/include/service_temp/service_temp/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[11.065435] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/include/service_temp/service_temp/srv/detail/convert_temp__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[11.078144] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/include/service_temp/service_temp/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[11.090190] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/include/service_temp/service_temp/srv/detail/convert_temp__rosidl_typesupport_introspection_c.h\n'}
+[11.106976] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/include/service_temp/service_temp/srv/detail/convert_temp__rosidl_typesupport_introspection_cpp.hpp\n'}
+[11.119986] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/share/service_temp/environment/pythonpath.sh\n'}
+[11.133659] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/share/service_temp/environment/pythonpath.dsv\n'}
+[11.147526] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/local/lib/python3.10/dist-packages/service_temp-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[11.150078] (-) TimerEvent: {}
+[11.158779] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/local/lib/python3.10/dist-packages/service_temp-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[11.160605] (battery_act) StdoutLine: {'line': b'[ 80%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/battery_act/libbattery_act__rosidl_generator_py.so\x1b[0m\n'}
+[11.169924] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/local/lib/python3.10/dist-packages/service_temp-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[11.182430] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/local/lib/python3.10/dist-packages/service_temp-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[11.193876] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/local/lib/python3.10/dist-packages/service_temp/__init__.py\n'}
+[11.204634] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/local/lib/python3.10/dist-packages/service_temp/_service_temp_s.ep.rosidl_typesupport_c.c\n'}
+[11.214412] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/local/lib/python3.10/dist-packages/service_temp/_service_temp_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[11.217268] (battery_act) StdoutLine: {'line': b'[ 80%] Built target battery_act__rosidl_generator_py\n'}
+[11.227265] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/local/lib/python3.10/dist-packages/service_temp/_service_temp_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[11.241288] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/local/lib/python3.10/dist-packages/service_temp/libservice_temp__rosidl_generator_py.so\n'}
+[11.248902] (battery_act) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/battery_act__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/battery_act/_battery_act_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[11.249161] (battery_act) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/battery_act__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/battery_act/_battery_act_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[11.249613] (battery_act) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/battery_act__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/battery_act/_battery_act_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[11.250155] (-) TimerEvent: {}
+[11.256919] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/local/lib/python3.10/dist-packages/service_temp/service_temp_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[11.272230] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/local/lib/python3.10/dist-packages/service_temp/service_temp_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[11.288954] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/local/lib/python3.10/dist-packages/service_temp/service_temp_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[11.305138] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/local/lib/python3.10/dist-packages/service_temp/srv/__init__.py\n'}
+[11.321986] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/local/lib/python3.10/dist-packages/service_temp/srv/_convert_temp.py\n'}
+[11.336448] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/local/lib/python3.10/dist-packages/service_temp/srv/_convert_temp_s.c\n'}
+[11.350282] (-) TimerEvent: {}
+[11.351208] (service_temp) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/ros2_ws/install/service_temp/local/lib/python3.10/dist-packages/service_temp/service_temp_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[11.352094] (service_temp) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/ros2_ws/install/service_temp/local/lib/python3.10/dist-packages/service_temp/service_temp_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[11.352908] (service_temp) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/ros2_ws/install/service_temp/local/lib/python3.10/dist-packages/service_temp/service_temp_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[11.353537] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/share/service_temp/srv/ConvertTemp.idl\n'}
+[11.368581] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/share/service_temp/srv/ConvertTemp.srv\n'}
+[11.385193] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/share/service_temp/srv/ConvertTemp_Request.msg\n'}
+[11.399604] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/share/service_temp/srv/ConvertTemp_Response.msg\n'}
+[11.414057] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/lib//server.py\n'}
+[11.428330] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/lib//client.py\n'}
+[11.443169] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/share/ament_index/resource_index/package_run_dependencies/service_temp\n'}
+[11.450397] (-) TimerEvent: {}
+[11.458104] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/share/ament_index/resource_index/parent_prefix_path/service_temp\n'}
+[11.473698] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/share/service_temp/environment/ament_prefix_path.sh\n'}
+[11.490898] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/share/service_temp/environment/ament_prefix_path.dsv\n'}
+[11.502595] (battery_act) StdoutLine: {'line': b'[ 93%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/battery_act/battery_act_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[11.504605] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/share/service_temp/environment/path.sh\n'}
+[11.511263] (battery_act) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/battery_act/battery_act_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[11.511587] (battery_act) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/battery_act/battery_act_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[11.518355] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/share/service_temp/environment/path.dsv\n'}
+[11.533243] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/share/service_temp/local_setup.bash\n'}
+[11.551155] (-) TimerEvent: {}
+[11.552574] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/share/service_temp/local_setup.sh\n'}
+[11.568962] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/share/service_temp/local_setup.zsh\n'}
+[11.581961] (battery_act) StdoutLine: {'line': b'[100%] Built target battery_act__rosidl_typesupport_fastrtps_c__pyext\n'}
+[11.586001] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/share/service_temp/local_setup.dsv\n'}
+[11.588362] (battery_act) StdoutLine: {'line': b'[100%] Built target battery_act__rosidl_typesupport_introspection_c__pyext\n'}
+[11.591396] (battery_act) StdoutLine: {'line': b'[100%] Built target battery_act__rosidl_typesupport_c__pyext\n'}
+[11.598340] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/share/service_temp/package.dsv\n'}
+[11.605410] (battery_act) CommandEnded: {'returncode': 0}
+[11.606302] (battery_act) JobProgress: {'identifier': 'battery_act', 'progress': 'install'}
+[11.606880] (battery_act) Command: {'cmd': ['/usr/bin/cmake', '--install', '/workspace/ros2_ws/build/battery_act'], 'cwd': '/workspace/ros2_ws/build/battery_act', 'env': OrderedDict([('HOSTNAME', 'aggg'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/workspace/ros2_ws/install/battery_act/lib:/workspace/ros2_ws/install/service_temp/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/aalexxgarciaa_-docker'), ('OLDPWD', '/workspace/ros2_ws/src/battery_act/scripts'), ('ROS_PYTHON_VERSION', '3'), ('LC_CTYPE', 'C.UTF-8'), ('COLCON_PREFIX_PATH', '/workspace/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':0'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/workspace/ros2_ws/install/battery_act:/workspace/ros2_ws/install/service_temp:/workspace/ros2_ws/install/practicatar:/workspace/ros2_ws/install/my_py_pkg:/opt/ros/humble'), ('DEBIAN_FRONTEND', 'noninteractive'), ('PWD', '/workspace/ros2_ws/build/battery_act'), ('PYTHONPATH', '/workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages:/workspace/ros2_ws/install/service_temp/local/lib/python3.10/dist-packages:/workspace/ros2_ws/build/service_temp:/workspace/ros2_ws/install/service_temp/lib/python3.10/site-packages:/workspace/ros2_ws/build/practicatar:/workspace/ros2_ws/install/practicatar/lib/python3.10/site-packages:/workspace/ros2_ws/build/my_py_pkg:/workspace/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('TZ', 'Europe/Madrid'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/workspace/ros2_ws/install/battery_act:/workspace/ros2_ws/install/service_temp:/workspace/ros2_ws/install/practicatar:/workspace/ros2_ws/install/my_py_pkg:/opt/ros/humble')]), 'shell': False}
+[11.609528] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/share/ament_index/resource_index/packages/service_temp\n'}
+[11.616556] (battery_act) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[11.617217] (battery_act) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[11.617634] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/share/ament_index/resource_index/rosidl_interfaces/battery_act\n'}
+[11.619514] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/share/service_temp/cmake/rosidl_cmake-extras.cmake\n'}
+[11.628613] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/include/battery_act/battery_act/action/battery.h\n'}
+[11.629847] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/share/service_temp/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[11.638589] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/include/battery_act/battery_act/action/detail/battery__functions.h\n'}
+[11.638889] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/share/service_temp/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[11.649313] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/share/service_temp/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[11.651262] (-) TimerEvent: {}
+[11.652221] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/include/battery_act/battery_act/action/detail/battery__struct.h\n'}
+[11.661232] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/share/service_temp/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[11.666462] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/include/battery_act/battery_act/action/detail/battery__type_support.h\n'}
+[11.672302] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/share/service_temp/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[11.679420] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/include/battery_act/battery_act/msg/rosidl_generator_c__visibility_control.h\n'}
+[11.685953] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/share/service_temp/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[11.690981] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/environment/library_path.sh\n'}
+[11.696253] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/share/service_temp/cmake/service_tempConfig.cmake\n'}
+[11.701405] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/environment/library_path.dsv\n'}
+[11.706081] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/share/service_temp/cmake/service_tempConfig-version.cmake\n'}
+[11.712754] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/include/battery_act/battery_act/action/detail/battery__rosidl_typesupport_fastrtps_c.h\n'}
+[11.718795] (service_temp) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/service_temp/share/service_temp/package.xml\n'}
+[11.724216] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/include/battery_act/battery_act/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[11.732197] (service_temp) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/service_temp/lib/libservice_temp__rosidl_generator_c.so\n'}
+[11.733575] (service_temp) StdoutLine: {'line': b'-- Set runtime path of "/workspace/ros2_ws/install/service_temp/lib/libservice_temp__rosidl_generator_c.so" to ""\n'}
+[11.734308] (service_temp) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/service_temp/lib/libservice_temp__rosidl_typesupport_fastrtps_c.so\n'}
+[11.735547] (service_temp) StdoutLine: {'line': b'-- Set runtime path of "/workspace/ros2_ws/install/service_temp/lib/libservice_temp__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[11.736050] (service_temp) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/service_temp/lib/libservice_temp__rosidl_typesupport_fastrtps_cpp.so\n'}
+[11.737204] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/include/battery_act/battery_act/action/battery.hpp\n'}
+[11.737585] (service_temp) StdoutLine: {'line': b'-- Set runtime path of "/workspace/ros2_ws/install/service_temp/lib/libservice_temp__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[11.738183] (service_temp) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/service_temp/lib/libservice_temp__rosidl_typesupport_introspection_c.so\n'}
+[11.740644] (service_temp) StdoutLine: {'line': b'-- Set runtime path of "/workspace/ros2_ws/install/service_temp/lib/libservice_temp__rosidl_typesupport_introspection_c.so" to ""\n'}
+[11.741278] (service_temp) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/service_temp/lib/libservice_temp__rosidl_typesupport_c.so\n'}
+[11.744467] (service_temp) StdoutLine: {'line': b'-- Set runtime path of "/workspace/ros2_ws/install/service_temp/lib/libservice_temp__rosidl_typesupport_c.so" to ""\n'}
+[11.745272] (service_temp) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/service_temp/lib/libservice_temp__rosidl_typesupport_introspection_cpp.so\n'}
+[11.746507] (service_temp) StdoutLine: {'line': b'-- Set runtime path of "/workspace/ros2_ws/install/service_temp/lib/libservice_temp__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[11.747073] (service_temp) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/service_temp/lib/libservice_temp__rosidl_typesupport_cpp.so\n'}
+[11.748189] (service_temp) StdoutLine: {'line': b'-- Set runtime path of "/workspace/ros2_ws/install/service_temp/lib/libservice_temp__rosidl_typesupport_cpp.so" to ""\n'}
+[11.751580] (-) TimerEvent: {}
+[11.753163] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/include/battery_act/battery_act/action/detail/battery__builder.hpp\n'}
+[11.768768] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/include/battery_act/battery_act/action/detail/battery__struct.hpp\n'}
+[11.790612] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/include/battery_act/battery_act/action/detail/battery__traits.hpp\n'}
+[11.806172] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/include/battery_act/battery_act/action/detail/battery__type_support.hpp\n'}
+[11.821600] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/include/battery_act/battery_act/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[11.838532] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/include/battery_act/battery_act/action/detail/battery__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[11.843015] (service_temp) StdoutLine: {'line': b"Listing '/workspace/ros2_ws/install/service_temp/local/lib/python3.10/dist-packages/service_temp'...\n"}
+[11.843443] (service_temp) StdoutLine: {'line': b"Compiling '/workspace/ros2_ws/install/service_temp/local/lib/python3.10/dist-packages/service_temp/__init__.py'...\n"}
+[11.843607] (service_temp) StdoutLine: {'line': b"Listing '/workspace/ros2_ws/install/service_temp/local/lib/python3.10/dist-packages/service_temp/srv'...\n"}
+[11.843787] (service_temp) StdoutLine: {'line': b"Compiling '/workspace/ros2_ws/install/service_temp/local/lib/python3.10/dist-packages/service_temp/srv/__init__.py'...\n"}
+[11.843922] (service_temp) StdoutLine: {'line': b"Compiling '/workspace/ros2_ws/install/service_temp/local/lib/python3.10/dist-packages/service_temp/srv/_convert_temp.py'...\n"}
+[11.851717] (-) TimerEvent: {}
+[11.855600] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/include/battery_act/battery_act/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[11.859330] (service_temp) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/service_temp/lib/libservice_temp__rosidl_generator_py.so\n'}
+[11.859760] (service_temp) StdoutLine: {'line': b'-- Set runtime path of "/workspace/ros2_ws/install/service_temp/lib/libservice_temp__rosidl_generator_py.so" to ""\n'}
+[11.859992] (service_temp) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/service_temp/share/service_temp/cmake/export_service_temp__rosidl_generator_cExport.cmake\n'}
+[11.860130] (service_temp) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/service_temp/share/service_temp/cmake/export_service_temp__rosidl_generator_cExport-noconfig.cmake\n'}
+[11.860359] (service_temp) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/service_temp/share/service_temp/cmake/export_service_temp__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[11.860505] (service_temp) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/service_temp/share/service_temp/cmake/export_service_temp__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[11.860689] (service_temp) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/service_temp/share/service_temp/cmake/export_service_temp__rosidl_generator_cppExport.cmake\n'}
+[11.860863] (service_temp) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/service_temp/share/service_temp/cmake/export_service_temp__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[11.860998] (service_temp) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/service_temp/share/service_temp/cmake/export_service_temp__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[11.861138] (service_temp) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/service_temp/share/service_temp/cmake/service_temp__rosidl_typesupport_introspection_cExport.cmake\n'}
+[11.861329] (service_temp) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/service_temp/share/service_temp/cmake/service_temp__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[11.861470] (service_temp) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/service_temp/share/service_temp/cmake/service_temp__rosidl_typesupport_cExport.cmake\n'}
+[11.861663] (service_temp) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/service_temp/share/service_temp/cmake/service_temp__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[11.861860] (service_temp) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/service_temp/share/service_temp/cmake/service_temp__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[11.862086] (service_temp) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/service_temp/share/service_temp/cmake/service_temp__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[11.862242] (service_temp) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/service_temp/share/service_temp/cmake/service_temp__rosidl_typesupport_cppExport.cmake\n'}
+[11.862436] (service_temp) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/service_temp/share/service_temp/cmake/service_temp__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[11.862705] (service_temp) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/service_temp/share/service_temp/cmake/export_service_temp__rosidl_generator_pyExport.cmake\n'}
+[11.863270] (service_temp) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/service_temp/share/service_temp/cmake/export_service_temp__rosidl_generator_pyExport-noconfig.cmake\n'}
+[11.879214] (service_temp) CommandEnded: {'returncode': 0}
+[11.883759] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/include/battery_act/battery_act/action/detail/battery__rosidl_typesupport_introspection_c.h\n'}
+[11.902049] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/include/battery_act/battery_act/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[11.915526] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/include/battery_act/battery_act/action/detail/battery__rosidl_typesupport_introspection_cpp.hpp\n'}
+[11.921555] (service_temp) JobEnded: {'identifier': 'service_temp', 'rc': 0}
+[11.931067] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/environment/pythonpath.sh\n'}
+[11.947664] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/environment/pythonpath.dsv\n'}
+[11.951861] (-) TimerEvent: {}
+[11.963883] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[11.979087] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[11.995139] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[12.010461] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[12.023406] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act/__init__.py\n'}
+[12.037638] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act/_battery_act_s.ep.rosidl_typesupport_c.c\n'}
+[12.051658] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act/_battery_act_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[12.051881] (-) TimerEvent: {}
+[12.066290] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act/_battery_act_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[12.079535] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act/action/__init__.py\n'}
+[12.092116] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act/action/_battery.py\n'}
+[12.104871] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act/action/_battery_s.c\n'}
+[12.117742] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act/battery_act_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[12.130883] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act/battery_act_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[12.142123] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act/battery_act_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[12.152046] (-) TimerEvent: {}
+[12.155251] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act/libbattery_act__rosidl_generator_py.so\n'}
+[12.168561] (battery_act) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act/battery_act_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[12.168952] (battery_act) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act/battery_act_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[12.169508] (battery_act) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act/battery_act_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[12.169903] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/action/Battery.idl\n'}
+[12.184099] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/action/Battery.action\n'}
+[12.197806] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/lib//battery_charger.py\n'}
+[12.208598] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/lib//battery_client.py\n'}
+[12.220735] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/share/ament_index/resource_index/package_run_dependencies/battery_act\n'}
+[12.233528] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/share/ament_index/resource_index/parent_prefix_path/battery_act\n'}
+[12.245785] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/environment/ament_prefix_path.sh\n'}
+[12.252186] (-) TimerEvent: {}
+[12.257788] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/environment/ament_prefix_path.dsv\n'}
+[12.270515] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/environment/path.sh\n'}
+[12.283714] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/environment/path.dsv\n'}
+[12.296081] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/local_setup.bash\n'}
+[12.306942] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/local_setup.sh\n'}
+[12.319543] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/local_setup.zsh\n'}
+[12.333540] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/local_setup.dsv\n'}
+[12.345279] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/package.dsv\n'}
+[12.352320] (-) TimerEvent: {}
+[12.355800] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/share/ament_index/resource_index/packages/battery_act\n'}
+[12.367522] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/rosidl_cmake-extras.cmake\n'}
+[12.377926] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[12.389164] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[12.400261] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[12.410528] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[12.420185] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[12.430467] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[12.440760] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/battery_actConfig.cmake\n'}
+[12.450603] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/battery_actConfig-version.cmake\n'}
+[12.452417] (-) TimerEvent: {}
+[12.461366] (battery_act) StdoutLine: {'line': b'-- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/package.xml\n'}
+[12.471264] (battery_act) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/battery_act/lib/libbattery_act__rosidl_generator_c.so\n'}
+[12.471800] (battery_act) StdoutLine: {'line': b'-- Set runtime path of "/workspace/ros2_ws/install/battery_act/lib/libbattery_act__rosidl_generator_c.so" to ""\n'}
+[12.471957] (battery_act) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/battery_act/lib/libbattery_act__rosidl_typesupport_fastrtps_c.so\n'}
+[12.472411] (battery_act) StdoutLine: {'line': b'-- Set runtime path of "/workspace/ros2_ws/install/battery_act/lib/libbattery_act__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[12.472565] (battery_act) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/battery_act/lib/libbattery_act__rosidl_typesupport_fastrtps_cpp.so\n'}
+[12.473112] (battery_act) StdoutLine: {'line': b'-- Set runtime path of "/workspace/ros2_ws/install/battery_act/lib/libbattery_act__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[12.473318] (battery_act) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/battery_act/lib/libbattery_act__rosidl_typesupport_introspection_c.so\n'}
+[12.473873] (battery_act) StdoutLine: {'line': b'-- Set runtime path of "/workspace/ros2_ws/install/battery_act/lib/libbattery_act__rosidl_typesupport_introspection_c.so" to ""\n'}
+[12.474081] (battery_act) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/battery_act/lib/libbattery_act__rosidl_typesupport_c.so\n'}
+[12.474709] (battery_act) StdoutLine: {'line': b'-- Set runtime path of "/workspace/ros2_ws/install/battery_act/lib/libbattery_act__rosidl_typesupport_c.so" to ""\n'}
+[12.474912] (battery_act) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/battery_act/lib/libbattery_act__rosidl_typesupport_introspection_cpp.so\n'}
+[12.475698] (battery_act) StdoutLine: {'line': b'-- Set runtime path of "/workspace/ros2_ws/install/battery_act/lib/libbattery_act__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[12.475881] (battery_act) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/battery_act/lib/libbattery_act__rosidl_typesupport_cpp.so\n'}
+[12.476462] (battery_act) StdoutLine: {'line': b'-- Set runtime path of "/workspace/ros2_ws/install/battery_act/lib/libbattery_act__rosidl_typesupport_cpp.so" to ""\n'}
+[12.530879] (battery_act) StdoutLine: {'line': b"Listing '/workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act'...\n"}
+[12.531161] (battery_act) StdoutLine: {'line': b"Compiling '/workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act/__init__.py'...\n"}
+[12.531300] (battery_act) StdoutLine: {'line': b"Listing '/workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act/action'...\n"}
+[12.531418] (battery_act) StdoutLine: {'line': b"Compiling '/workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act/action/__init__.py'...\n"}
+[12.531531] (battery_act) StdoutLine: {'line': b"Compiling '/workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act/action/_battery.py'...\n"}
+[12.536929] (battery_act) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/battery_act/lib/libbattery_act__rosidl_generator_py.so\n'}
+[12.537472] (battery_act) StdoutLine: {'line': b'-- Set runtime path of "/workspace/ros2_ws/install/battery_act/lib/libbattery_act__rosidl_generator_py.so" to ""\n'}
+[12.537657] (battery_act) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/export_battery_act__rosidl_generator_cExport.cmake\n'}
+[12.537855] (battery_act) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/export_battery_act__rosidl_generator_cExport-noconfig.cmake\n'}
+[12.538053] (battery_act) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/export_battery_act__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[12.538243] (battery_act) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/export_battery_act__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[12.538435] (battery_act) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/export_battery_act__rosidl_generator_cppExport.cmake\n'}
+[12.538668] (battery_act) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/export_battery_act__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[12.538873] (battery_act) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/export_battery_act__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[12.539131] (battery_act) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/battery_act__rosidl_typesupport_introspection_cExport.cmake\n'}
+[12.539423] (battery_act) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/battery_act__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[12.539602] (battery_act) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/battery_act__rosidl_typesupport_cExport.cmake\n'}
+[12.539887] (battery_act) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/battery_act__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[12.540087] (battery_act) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/battery_act__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[12.540273] (battery_act) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/battery_act__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[12.540461] (battery_act) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/battery_act__rosidl_typesupport_cppExport.cmake\n'}
+[12.540667] (battery_act) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/battery_act__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[12.540898] (battery_act) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/export_battery_act__rosidl_generator_pyExport.cmake\n'}
+[12.541116] (battery_act) StdoutLine: {'line': b'-- Installing: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/export_battery_act__rosidl_generator_pyExport-noconfig.cmake\n'}
+[12.543916] (battery_act) CommandEnded: {'returncode': 0}
+[12.552546] (-) TimerEvent: {}
+[12.563875] (battery_act) JobEnded: {'identifier': 'battery_act', 'rc': 0}
+[12.564714] (-) EventReactorShutdown: {}

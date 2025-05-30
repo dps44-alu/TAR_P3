@@ -1,0 +1,1 @@
+/workspace/ros2_ws/build/service_temp/ament_cmake_core/service_tempConfig-version.cmake

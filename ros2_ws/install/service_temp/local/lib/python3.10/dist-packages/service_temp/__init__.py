@@ -1,0 +1,1 @@
+/workspace/ros2_ws/build/service_temp/rosidl_generator_py/service_temp/__init__.py

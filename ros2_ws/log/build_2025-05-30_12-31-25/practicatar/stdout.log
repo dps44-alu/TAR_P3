@@ -1,0 +1,21 @@
+running develop
+running egg_info
+creating practicatar.egg-info
+writing practicatar.egg-info/PKG-INFO
+writing dependency_links to practicatar.egg-info/dependency_links.txt
+writing entry points to practicatar.egg-info/entry_points.txt
+writing requirements to practicatar.egg-info/requires.txt
+writing top-level names to practicatar.egg-info/top_level.txt
+writing manifest file 'practicatar.egg-info/SOURCES.txt'
+reading manifest file 'practicatar.egg-info/SOURCES.txt'
+writing manifest file 'practicatar.egg-info/SOURCES.txt'
+running build_ext
+Creating /workspace/ros2_ws/install/practicatar/lib/python3.10/site-packages/practicatar.egg-link (link to .)
+
+Installed /workspace/ros2_ws/build/practicatar
+running symlink_data
+creating /workspace/ros2_ws/install/practicatar/share/ament_index
+creating /workspace/ros2_ws/install/practicatar/share/ament_index/resource_index
+creating /workspace/ros2_ws/install/practicatar/share/ament_index/resource_index/packages
+symbolically linking /workspace/ros2_ws/build/practicatar/resource/practicatar -> /workspace/ros2_ws/install/practicatar/share/ament_index/resource_index/packages
+symbolically linking /workspace/ros2_ws/build/practicatar/package.xml -> /workspace/ros2_ws/install/practicatar/share/practicatar

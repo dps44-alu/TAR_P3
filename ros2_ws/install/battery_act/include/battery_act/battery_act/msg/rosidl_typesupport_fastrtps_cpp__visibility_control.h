@@ -1,0 +1,1 @@
+/workspace/ros2_ws/build/battery_act/rosidl_typesupport_fastrtps_cpp/battery_act/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h

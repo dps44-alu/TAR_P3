@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "battery_act__py",
+		"source" : "/workspace/ros2_ws/build/battery_act/battery_act__py"
+	}
+}

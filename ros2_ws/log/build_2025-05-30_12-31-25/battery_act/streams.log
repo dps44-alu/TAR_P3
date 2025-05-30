@@ -1,0 +1,214 @@
+[0.039s] Invoking command in '/workspace/ros2_ws/build/battery_act': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/ros2_ws/install/practicatar:/workspace/ros2_ws/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake /workspace/ros2_ws/src/battery_act -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/workspace/ros2_ws/install/battery_act
+[0.721s] -- The C compiler identification is GNU 11.4.0
+[0.721s] -- The CXX compiler identification is GNU 11.4.0
+[0.721s] -- Detecting C compiler ABI info
+[0.721s] -- Detecting C compiler ABI info - done
+[0.721s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.722s] -- Detecting C compile features
+[0.722s] -- Detecting C compile features - done
+[0.722s] -- Detecting CXX compiler ABI info
+[0.723s] -- Detecting CXX compiler ABI info - done
+[0.723s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.724s] -- Detecting CXX compile features
+[0.724s] -- Detecting CXX compile features - done
+[0.724s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.724s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.749s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.797s] -- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)
+[0.885s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.896s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.916s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.944s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.983s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.091s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.096s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.268s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.321s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.406s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.422s] -- Looking for pthread.h
+[1.556s] -- Looking for pthread.h - found
+[1.557s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.688s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.690s] -- Found Threads: TRUE  
+[1.814s] -- Found rclpy: 3.3.16 (/opt/ros/humble/share/rclpy/cmake)
+[1.817s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[2.432s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[2.860s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.037s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.067s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[3.069s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[3.103s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[3.103s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[3.103s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[3.103s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[3.137s] -- Found PythonExtra: .so  
+[3.204s] -- Configuring done
+[3.250s] -- Generating done
+[3.265s] -- Build files have been written to: /workspace/ros2_ws/build/battery_act
+[3.281s] Invoked command in '/workspace/ros2_ws/build/battery_act' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/ros2_ws/install/practicatar:/workspace/ros2_ws/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake /workspace/ros2_ws/src/battery_act -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/workspace/ros2_ws/install/battery_act
+[3.284s] Invoking command in '/workspace/ros2_ws/build/battery_act': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/ros2_ws/install/practicatar:/workspace/ros2_ws/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --build /workspace/ros2_ws/build/battery_act -- -j4 -l4
+[3.336s] [  3%] [34m[1mGenerating C code for ROS interfaces[0m
+[3.351s] [  6%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[3.365s] [  6%] Built target ament_cmake_python_symlink_battery_act
+[3.820s] running egg_info
+[3.821s] creating battery_act.egg-info
+[3.822s] writing battery_act.egg-info/PKG-INFO
+[3.822s] writing dependency_links to battery_act.egg-info/dependency_links.txt
+[3.822s] writing top-level names to battery_act.egg-info/top_level.txt
+[3.822s] writing manifest file 'battery_act.egg-info/SOURCES.txt'
+[3.826s] reading manifest file 'battery_act.egg-info/SOURCES.txt'
+[3.827s] writing manifest file 'battery_act.egg-info/SOURCES.txt'
+[3.876s] [  6%] Built target ament_cmake_python_build_battery_act_egg
+[4.304s] [  6%] Built target battery_act__cpp
+[4.356s] [  9%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[4.367s] [ 12%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[4.368s] [ 16%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[4.547s] [ 19%] [32mBuilding C object CMakeFiles/battery_act__rosidl_generator_c.dir/rosidl_generator_c/battery_act/action/detail/battery__functions.c.o[0m
+[5.077s] [ 22%] [32m[1mLinking C shared library libbattery_act__rosidl_generator_c.so[0m
+[5.167s] [ 25%] [32mBuilding CXX object CMakeFiles/battery_act__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/battery_act/action/battery__type_support.cpp.o[0m
+[5.230s] [ 25%] Built target battery_act__rosidl_generator_c
+[5.270s] [ 29%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[5.713s] [ 32%] [32mBuilding CXX object CMakeFiles/battery_act__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/battery_act/action/detail/battery__type_support.cpp.o[0m
+[6.434s] [ 35%] [32mBuilding CXX object CMakeFiles/battery_act__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/battery_act/action/detail/dds_fastrtps/battery__type_support.cpp.o[0m
+[6.659s] [ 38%] [32m[1mLinking CXX shared library libbattery_act__rosidl_typesupport_cpp.so[0m
+[6.870s] [ 38%] Built target battery_act__rosidl_typesupport_cpp
+[6.957s] [ 41%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[6.998s] [ 45%] [32mBuilding CXX object CMakeFiles/battery_act__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/battery_act/action/detail/battery__type_support_c.cpp.o[0m
+[7.829s] [ 48%] [32m[1mLinking CXX shared library libbattery_act__rosidl_typesupport_introspection_cpp.so[0m
+[8.382s] [ 48%] Built target battery_act__rosidl_typesupport_introspection_cpp
+[8.468s] [ 51%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[8.766s] [ 54%] [32mBuilding C object CMakeFiles/battery_act__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/battery_act/action/detail/battery__type_support.c.o[0m
+[8.883s] [ 58%] [32m[1mLinking CXX shared library libbattery_act__rosidl_typesupport_fastrtps_c.so[0m
+[9.137s] [ 61%] [32m[1mLinking C shared library libbattery_act__rosidl_typesupport_introspection_c.so[0m
+[9.204s] [ 64%] [32m[1mLinking CXX shared library libbattery_act__rosidl_typesupport_fastrtps_cpp.so[0m
+[9.230s] [ 64%] Built target battery_act__rosidl_typesupport_fastrtps_c
+[9.243s] [ 64%] Built target battery_act__rosidl_typesupport_introspection_c
+[9.361s] [ 64%] Built target battery_act__rosidl_typesupport_fastrtps_cpp
+[9.386s] [ 67%] [32mBuilding CXX object CMakeFiles/battery_act__rosidl_typesupport_c.dir/rosidl_typesupport_c/battery_act/action/battery__type_support.cpp.o[0m
+[9.445s] [ 70%] [32m[1mLinking CXX shared library libbattery_act__rosidl_typesupport_c.so[0m
+[9.495s] [ 70%] Built target battery_act__rosidl_typesupport_c
+[9.522s] [ 70%] Built target battery_act
+[9.544s] [ 74%] [34m[1mGenerating Python code for ROS interfaces[0m
+[10.879s] [ 74%] Built target battery_act__py
+[10.908s] [ 77%] [32mBuilding C object CMakeFiles/battery_act__rosidl_generator_py.dir/rosidl_generator_py/battery_act/action/_battery_s.c.o[0m
+[11.159s] [ 80%] [32m[1mLinking C shared library rosidl_generator_py/battery_act/libbattery_act__rosidl_generator_py.so[0m
+[11.216s] [ 80%] Built target battery_act__rosidl_generator_py
+[11.248s] [ 87%] [32mBuilding C object CMakeFiles/battery_act__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/battery_act/_battery_act_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[11.248s] [ 87%] [32mBuilding C object CMakeFiles/battery_act__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/battery_act/_battery_act_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[11.248s] [ 90%] [32mBuilding C object CMakeFiles/battery_act__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/battery_act/_battery_act_s.ep.rosidl_typesupport_c.c.o[0m
+[11.501s] [ 93%] [32m[1mLinking C shared library rosidl_generator_py/battery_act/battery_act_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[11.510s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/battery_act/battery_act_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[11.510s] [100%] [32m[1mLinking C shared library rosidl_generator_py/battery_act/battery_act_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[11.581s] [100%] Built target battery_act__rosidl_typesupport_fastrtps_c__pyext
+[11.587s] [100%] Built target battery_act__rosidl_typesupport_introspection_c__pyext
+[11.590s] [100%] Built target battery_act__rosidl_typesupport_c__pyext
+[11.604s] Invoked command in '/workspace/ros2_ws/build/battery_act' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/ros2_ws/install/practicatar:/workspace/ros2_ws/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --build /workspace/ros2_ws/build/battery_act -- -j4 -l4
+[11.606s] Invoking command in '/workspace/ros2_ws/build/battery_act': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/ros2_ws/install/practicatar:/workspace/ros2_ws/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --install /workspace/ros2_ws/build/battery_act
+[11.615s] -- Install configuration: ""
+[11.616s] -- Execute custom install script
+[11.616s] -- Symlinking: /workspace/ros2_ws/install/battery_act/share/ament_index/resource_index/rosidl_interfaces/battery_act
+[11.627s] -- Symlinking: /workspace/ros2_ws/install/battery_act/include/battery_act/battery_act/action/battery.h
+[11.637s] -- Symlinking: /workspace/ros2_ws/install/battery_act/include/battery_act/battery_act/action/detail/battery__functions.h
+[11.651s] -- Symlinking: /workspace/ros2_ws/install/battery_act/include/battery_act/battery_act/action/detail/battery__struct.h
+[11.665s] -- Symlinking: /workspace/ros2_ws/install/battery_act/include/battery_act/battery_act/action/detail/battery__type_support.h
+[11.678s] -- Symlinking: /workspace/ros2_ws/install/battery_act/include/battery_act/battery_act/msg/rosidl_generator_c__visibility_control.h
+[11.690s] -- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/environment/library_path.sh
+[11.700s] -- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/environment/library_path.dsv
+[11.712s] -- Symlinking: /workspace/ros2_ws/install/battery_act/include/battery_act/battery_act/action/detail/battery__rosidl_typesupport_fastrtps_c.h
+[11.723s] -- Symlinking: /workspace/ros2_ws/install/battery_act/include/battery_act/battery_act/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[11.736s] -- Symlinking: /workspace/ros2_ws/install/battery_act/include/battery_act/battery_act/action/battery.hpp
+[11.752s] -- Symlinking: /workspace/ros2_ws/install/battery_act/include/battery_act/battery_act/action/detail/battery__builder.hpp
+[11.768s] -- Symlinking: /workspace/ros2_ws/install/battery_act/include/battery_act/battery_act/action/detail/battery__struct.hpp
+[11.789s] -- Symlinking: /workspace/ros2_ws/install/battery_act/include/battery_act/battery_act/action/detail/battery__traits.hpp
+[11.805s] -- Symlinking: /workspace/ros2_ws/install/battery_act/include/battery_act/battery_act/action/detail/battery__type_support.hpp
+[11.820s] -- Symlinking: /workspace/ros2_ws/install/battery_act/include/battery_act/battery_act/msg/rosidl_generator_cpp__visibility_control.hpp
+[11.837s] -- Symlinking: /workspace/ros2_ws/install/battery_act/include/battery_act/battery_act/action/detail/battery__rosidl_typesupport_fastrtps_cpp.hpp
+[11.854s] -- Symlinking: /workspace/ros2_ws/install/battery_act/include/battery_act/battery_act/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[11.883s] -- Symlinking: /workspace/ros2_ws/install/battery_act/include/battery_act/battery_act/action/detail/battery__rosidl_typesupport_introspection_c.h
+[11.901s] -- Symlinking: /workspace/ros2_ws/install/battery_act/include/battery_act/battery_act/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[11.915s] -- Symlinking: /workspace/ros2_ws/install/battery_act/include/battery_act/battery_act/action/detail/battery__rosidl_typesupport_introspection_cpp.hpp
+[11.930s] -- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/environment/pythonpath.sh
+[11.946s] -- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/environment/pythonpath.dsv
+[11.963s] -- Symlinking: /workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act-0.0.0-py3.10.egg-info/PKG-INFO
+[11.978s] -- Symlinking: /workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act-0.0.0-py3.10.egg-info/SOURCES.txt
+[11.994s] -- Symlinking: /workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act-0.0.0-py3.10.egg-info/dependency_links.txt
+[12.009s] -- Symlinking: /workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act-0.0.0-py3.10.egg-info/top_level.txt
+[12.022s] -- Symlinking: /workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act/__init__.py
+[12.036s] -- Symlinking: /workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act/_battery_act_s.ep.rosidl_typesupport_c.c
+[12.050s] -- Symlinking: /workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act/_battery_act_s.ep.rosidl_typesupport_fastrtps_c.c
+[12.065s] -- Symlinking: /workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act/_battery_act_s.ep.rosidl_typesupport_introspection_c.c
+[12.078s] -- Symlinking: /workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act/action/__init__.py
+[12.091s] -- Symlinking: /workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act/action/_battery.py
+[12.104s] -- Symlinking: /workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act/action/_battery_s.c
+[12.117s] -- Symlinking: /workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act/battery_act_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[12.130s] -- Symlinking: /workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act/battery_act_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[12.141s] -- Symlinking: /workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act/battery_act_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[12.154s] -- Symlinking: /workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act/libbattery_act__rosidl_generator_py.so
+[12.167s] -- Up-to-date symlink: /workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act/battery_act_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[12.168s] -- Up-to-date symlink: /workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act/battery_act_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[12.168s] -- Up-to-date symlink: /workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act/battery_act_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[12.169s] -- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/action/Battery.idl
+[12.183s] -- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/action/Battery.action
+[12.197s] -- Symlinking: /workspace/ros2_ws/install/battery_act/lib//battery_charger.py
+[12.207s] -- Symlinking: /workspace/ros2_ws/install/battery_act/lib//battery_client.py
+[12.220s] -- Symlinking: /workspace/ros2_ws/install/battery_act/share/ament_index/resource_index/package_run_dependencies/battery_act
+[12.232s] -- Symlinking: /workspace/ros2_ws/install/battery_act/share/ament_index/resource_index/parent_prefix_path/battery_act
+[12.245s] -- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/environment/ament_prefix_path.sh
+[12.257s] -- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/environment/ament_prefix_path.dsv
+[12.269s] -- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/environment/path.sh
+[12.283s] -- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/environment/path.dsv
+[12.295s] -- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/local_setup.bash
+[12.306s] -- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/local_setup.sh
+[12.318s] -- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/local_setup.zsh
+[12.332s] -- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/local_setup.dsv
+[12.344s] -- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/package.dsv
+[12.355s] -- Symlinking: /workspace/ros2_ws/install/battery_act/share/ament_index/resource_index/packages/battery_act
+[12.366s] -- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/rosidl_cmake-extras.cmake
+[12.377s] -- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/ament_cmake_export_dependencies-extras.cmake
+[12.388s] -- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/ament_cmake_export_include_directories-extras.cmake
+[12.399s] -- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/ament_cmake_export_libraries-extras.cmake
+[12.409s] -- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/ament_cmake_export_targets-extras.cmake
+[12.419s] -- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[12.429s] -- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[12.440s] -- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/battery_actConfig.cmake
+[12.449s] -- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/battery_actConfig-version.cmake
+[12.460s] -- Symlinking: /workspace/ros2_ws/install/battery_act/share/battery_act/package.xml
+[12.470s] -- Installing: /workspace/ros2_ws/install/battery_act/lib/libbattery_act__rosidl_generator_c.so
+[12.471s] -- Set runtime path of "/workspace/ros2_ws/install/battery_act/lib/libbattery_act__rosidl_generator_c.so" to ""
+[12.471s] -- Installing: /workspace/ros2_ws/install/battery_act/lib/libbattery_act__rosidl_typesupport_fastrtps_c.so
+[12.471s] -- Set runtime path of "/workspace/ros2_ws/install/battery_act/lib/libbattery_act__rosidl_typesupport_fastrtps_c.so" to ""
+[12.471s] -- Installing: /workspace/ros2_ws/install/battery_act/lib/libbattery_act__rosidl_typesupport_fastrtps_cpp.so
+[12.472s] -- Set runtime path of "/workspace/ros2_ws/install/battery_act/lib/libbattery_act__rosidl_typesupport_fastrtps_cpp.so" to ""
+[12.472s] -- Installing: /workspace/ros2_ws/install/battery_act/lib/libbattery_act__rosidl_typesupport_introspection_c.so
+[12.473s] -- Set runtime path of "/workspace/ros2_ws/install/battery_act/lib/libbattery_act__rosidl_typesupport_introspection_c.so" to ""
+[12.473s] -- Installing: /workspace/ros2_ws/install/battery_act/lib/libbattery_act__rosidl_typesupport_c.so
+[12.473s] -- Set runtime path of "/workspace/ros2_ws/install/battery_act/lib/libbattery_act__rosidl_typesupport_c.so" to ""
+[12.474s] -- Installing: /workspace/ros2_ws/install/battery_act/lib/libbattery_act__rosidl_typesupport_introspection_cpp.so
+[12.474s] -- Set runtime path of "/workspace/ros2_ws/install/battery_act/lib/libbattery_act__rosidl_typesupport_introspection_cpp.so" to ""
+[12.475s] -- Installing: /workspace/ros2_ws/install/battery_act/lib/libbattery_act__rosidl_typesupport_cpp.so
+[12.475s] -- Set runtime path of "/workspace/ros2_ws/install/battery_act/lib/libbattery_act__rosidl_typesupport_cpp.so" to ""
+[12.530s] Listing '/workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act'...
+[12.530s] Compiling '/workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act/__init__.py'...
+[12.530s] Listing '/workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act/action'...
+[12.530s] Compiling '/workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act/action/__init__.py'...
+[12.530s] Compiling '/workspace/ros2_ws/install/battery_act/local/lib/python3.10/dist-packages/battery_act/action/_battery.py'...
+[12.536s] -- Installing: /workspace/ros2_ws/install/battery_act/lib/libbattery_act__rosidl_generator_py.so
+[12.536s] -- Set runtime path of "/workspace/ros2_ws/install/battery_act/lib/libbattery_act__rosidl_generator_py.so" to ""
+[12.536s] -- Installing: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/export_battery_act__rosidl_generator_cExport.cmake
+[12.537s] -- Installing: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/export_battery_act__rosidl_generator_cExport-noconfig.cmake
+[12.537s] -- Installing: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/export_battery_act__rosidl_typesupport_fastrtps_cExport.cmake
+[12.537s] -- Installing: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/export_battery_act__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[12.537s] -- Installing: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/export_battery_act__rosidl_generator_cppExport.cmake
+[12.537s] -- Installing: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/export_battery_act__rosidl_typesupport_fastrtps_cppExport.cmake
+[12.538s] -- Installing: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/export_battery_act__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[12.538s] -- Installing: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/battery_act__rosidl_typesupport_introspection_cExport.cmake
+[12.538s] -- Installing: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/battery_act__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[12.538s] -- Installing: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/battery_act__rosidl_typesupport_cExport.cmake
+[12.539s] -- Installing: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/battery_act__rosidl_typesupport_cExport-noconfig.cmake
+[12.539s] -- Installing: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/battery_act__rosidl_typesupport_introspection_cppExport.cmake
+[12.539s] -- Installing: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/battery_act__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[12.539s] -- Installing: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/battery_act__rosidl_typesupport_cppExport.cmake
+[12.539s] -- Installing: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/battery_act__rosidl_typesupport_cppExport-noconfig.cmake
+[12.540s] -- Installing: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/export_battery_act__rosidl_generator_pyExport.cmake
+[12.540s] -- Installing: /workspace/ros2_ws/install/battery_act/share/battery_act/cmake/export_battery_act__rosidl_generator_pyExport-noconfig.cmake
+[12.543s] Invoked command in '/workspace/ros2_ws/build/battery_act' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/ros2_ws/install/practicatar:/workspace/ros2_ws/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --install /workspace/ros2_ws/build/battery_act

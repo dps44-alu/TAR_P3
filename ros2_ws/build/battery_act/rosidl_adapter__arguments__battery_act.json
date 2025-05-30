@@ -1,0 +1,6 @@
+{
+  "package_name": "battery_act",
+  "non_idl_tuples": [
+    "/workspace/ros2_ws/src/battery_act:action/Battery.action"
+  ]
+}

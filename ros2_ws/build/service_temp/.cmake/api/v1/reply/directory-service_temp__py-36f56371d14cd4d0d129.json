@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "service_temp__py",
+		"source" : "/workspace/ros2_ws/build/service_temp/service_temp__py"
+	}
+}

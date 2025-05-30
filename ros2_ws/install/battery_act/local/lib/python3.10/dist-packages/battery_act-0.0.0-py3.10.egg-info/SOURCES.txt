@@ -1,0 +1,1 @@
+/workspace/ros2_ws/build/battery_act/ament_cmake_python/battery_act/battery_act.egg-info/SOURCES.txt

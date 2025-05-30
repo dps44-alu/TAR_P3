@@ -1,0 +1,1 @@
+/workspace/ros2_ws/build/battery_act/rosidl_generator_c/battery_act/msg/rosidl_generator_c__visibility_control.h

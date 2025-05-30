@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/workspace/ros2_ws/build/service_temp/rosidl_generator_py/service_temp/service_temp_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" "TARGETS" "service_temp__rosidl_typesupport_c__pyext" "DESTINATION" "local/lib/python3.10/dist-packages/service_temp")

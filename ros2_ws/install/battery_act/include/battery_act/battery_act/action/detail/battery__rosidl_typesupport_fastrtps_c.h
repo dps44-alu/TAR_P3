@@ -1,0 +1,1 @@
+/workspace/ros2_ws/build/battery_act/rosidl_typesupport_fastrtps_c/battery_act/action/detail/battery__rosidl_typesupport_fastrtps_c.h

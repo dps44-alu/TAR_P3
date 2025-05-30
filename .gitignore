@@ -1,5 +1,0 @@
-ros2_ws/log/
-build/
-install/
-*.pyc
-__pycache__/
